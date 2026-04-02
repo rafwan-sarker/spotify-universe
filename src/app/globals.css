@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --neon-pink: #ff2d95;
+  --neon-cyan: #00f0ff;
+  --neon-purple: #b026ff;
+  --neon-blue: #1e90ff;
+  --bg-deep: #000005;
+  --bg-surface: #0a0a14;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-deep);
+  color: white;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
