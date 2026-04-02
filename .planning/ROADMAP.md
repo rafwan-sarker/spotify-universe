@@ -47,7 +47,12 @@ Plans:
   2. Spotify's micro-genres are normalized into 15-25 visible macro-genre clusters with distinct assigned colors
   3. Every fetched track has a computed 3D position within its genre cluster region
   4. The data pipeline handles libraries of 5000+ songs without freezing the browser
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 02-01-PLAN.md -- Define data contracts, genre normalization taxonomy, and star property computation (TDD)
+- [ ] 02-02-PLAN.md -- Create Spotify API proxy route handlers and update OAuth scopes
+- [ ] 02-03-PLAN.md -- Wire fetch orchestrator, Web Worker, and Zustand store into end-to-end pipeline
 
 ### Phase 3: Galaxy Renderer
 **Goal**: Users see their entire music library rendered as a living galaxy -- stars clustered by genre, sized by ranking, appearing in waves as data loads
@@ -93,8 +98,8 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Auth & Demo Mode | 0/3 | Planning complete | - |
-| 2. Data Pipeline | 0/TBD | Not started | - |
+| 1. Auth & Demo Mode | 3/3 | Complete | - |
+| 2. Data Pipeline | 0/3 | Planning complete | - |
 | 3. Galaxy Renderer | 0/TBD | Not started | - |
 | 4. Navigation & Interaction | 0/TBD | Not started | - |
 | 5. Visual Polish & HUD | 0/TBD | Not started | - |
