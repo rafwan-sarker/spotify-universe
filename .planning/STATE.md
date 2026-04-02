@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-01-PLAN.md
-last_updated: "2026-04-02T21:02:03.851Z"
+stopped_at: Completed 01-02-PLAN.md
+last_updated: "2026-04-02T21:08:21.371Z"
 last_activity: 2026-04-02
 progress:
   total_phases: 5
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-04-01)
 ## Current Position
 
 Phase: 01 (auth-demo-mode) — EXECUTING
-Plan: 2 of 3
+Plan: 3 of 3
 Status: Ready to execute
 Last activity: 2026-04-02
 
@@ -53,6 +53,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-auth-demo-mode P01 | 4min | 2 tasks | 19 files |
+| Phase 01-auth-demo-mode P02 | 3min | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -66,6 +67,8 @@ Recent decisions affecting current work:
 - [Roadmap]: Demo mode in Phase 1 (not deferred) because 5-user dev cap makes it a launch requirement
 - [Phase 01-auth-demo-mode]: All 4 Spotify scopes requested upfront in Phase 1 to prevent re-authorization
 - [Phase 01-auth-demo-mode]: 5-minute buffer on token expiry guards against jwt callback multi-invocation race condition
+- [Phase 01-auth-demo-mode]: Client wrapper GalaxySceneLoader for dynamic import -- Next.js 16 disallows ssr:false in server components
+- [Phase 01-auth-demo-mode]: InstancedMesh (not Points) for demo stars to match real galaxy rendering pattern from Phase 3
 
 ### Pending Todos
 
@@ -79,6 +82,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T21:02:03.849Z
-Stopped at: Completed 01-01-PLAN.md
+Last session: 2026-04-02T21:08:21.368Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
