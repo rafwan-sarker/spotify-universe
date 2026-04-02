@@ -34,7 +34,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01-PLAN.md -- Scaffold Next.js 16 project with Auth.js v5 Spotify OAuth and session persistence
 - [x] 01-02-PLAN.md -- Create demo galaxy 3D scene with ~200 stars, auto-orbit camera, and background starfield
-- [ ] 01-03-PLAN.md -- Wire auth UI components (demo banner, profile menu, error page, warp transitions)
+- [x] 01-03-PLAN.md -- Wire auth UI components (demo banner, profile menu, error page, warp transitions)
 
 **UI hint**: yes
 
