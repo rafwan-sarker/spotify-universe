@@ -82,30 +82,30 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | — | Pending |
-| AUTH-02 | — | Pending |
-| AUTH-03 | — | Pending |
-| DATA-01 | — | Pending |
-| DATA-02 | — | Pending |
-| DATA-03 | — | Pending |
-| GLXY-01 | — | Pending |
-| GLXY-02 | — | Pending |
-| GLXY-03 | — | Pending |
-| GLXY-04 | — | Pending |
-| GLXY-05 | — | Pending |
-| NAV-01 | — | Pending |
-| NAV-02 | — | Pending |
-| NAV-03 | — | Pending |
-| NAV-04 | — | Pending |
-| VIS-01 | — | Pending |
-| VIS-02 | — | Pending |
-| UI-01 | — | Pending |
+| AUTH-01 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Pending |
+| DATA-01 | Phase 2 | Pending |
+| DATA-02 | Phase 2 | Pending |
+| DATA-03 | Phase 2 | Pending |
+| GLXY-01 | Phase 3 | Pending |
+| GLXY-02 | Phase 3 | Pending |
+| GLXY-03 | Phase 3 | Pending |
+| GLXY-04 | Phase 3 | Pending |
+| GLXY-05 | Phase 3 | Pending |
+| NAV-01 | Phase 4 | Pending |
+| NAV-02 | Phase 4 | Pending |
+| NAV-03 | Phase 4 | Pending |
+| NAV-04 | Phase 4 | Pending |
+| VIS-01 | Phase 5 | Pending |
+| VIS-02 | Phase 5 | Pending |
+| UI-01 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 18 total
-- Mapped to phases: 0
-- Unmapped: 18 ⚠️
+- Mapped to phases: 18
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-01*
-*Last updated: 2026-04-01 after initial definition*
+*Last updated: 2026-04-02 after roadmap creation*
