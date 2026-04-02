@@ -1,0 +1,2692 @@
+{
+  "version": 1,
+  "description": "Demo galaxy with ~200 curated songs across 6 genres",
+  "genres": [
+    {
+      "id": "pop",
+      "name": "Pop",
+      "color": [
+        1,
+        0.4,
+        0.7
+      ],
+      "centroid": [
+        30,
+        0,
+        10
+      ]
+    },
+    {
+      "id": "rock",
+      "name": "Rock",
+      "color": [
+        0.9,
+        0.2,
+        0.2
+      ],
+      "centroid": [
+        -25,
+        5,
+        -20
+      ]
+    },
+    {
+      "id": "hiphop",
+      "name": "Hip-Hop",
+      "color": [
+        0.6,
+        0.2,
+        0.9
+      ],
+      "centroid": [
+        0,
+        -15,
+        30
+      ]
+    },
+    {
+      "id": "electronic",
+      "name": "Electronic",
+      "color": [
+        0.1,
+        0.8,
+        0.9
+      ],
+      "centroid": [
+        -10,
+        20,
+        -15
+      ]
+    },
+    {
+      "id": "rnb",
+      "name": "R&B",
+      "color": [
+        0.9,
+        0.6,
+        0.1
+      ],
+      "centroid": [
+        20,
+        -10,
+        -25
+      ]
+    },
+    {
+      "id": "indie",
+      "name": "Indie",
+      "color": [
+        0.4,
+        0.9,
+        0.4
+      ],
+      "centroid": [
+        -20,
+        -5,
+        25
+      ]
+    }
+  ],
+  "stars": [
+    {
+      "id": "demo-001",
+      "name": "Blinding Lights",
+      "artist": "The Weeknd",
+      "genre": "pop",
+      "position": [
+        10.21,
+        -0.33,
+        12.32
+      ],
+      "size": 1.96,
+      "brightness": 0.76
+    },
+    {
+      "id": "demo-002",
+      "name": "Anti-Hero",
+      "artist": "Taylor Swift",
+      "genre": "pop",
+      "position": [
+        29.75,
+        4.23,
+        7.81
+      ],
+      "size": 0.72,
+      "brightness": 0.62
+    },
+    {
+      "id": "demo-003",
+      "name": "Levitating",
+      "artist": "Dua Lipa",
+      "genre": "pop",
+      "position": [
+        25.94,
+        3.76,
+        13.13
+      ],
+      "size": 1.55,
+      "brightness": 0.54
+    },
+    {
+      "id": "demo-004",
+      "name": "bad guy",
+      "artist": "Billie Eilish",
+      "genre": "pop",
+      "position": [
+        33.78,
+        -2.65,
+        4.17
+      ],
+      "size": 0.7,
+      "brightness": 0.51
+    },
+    {
+      "id": "demo-005",
+      "name": "Watermelon Sugar",
+      "artist": "Harry Styles",
+      "genre": "pop",
+      "position": [
+        43.72,
+        0.47,
+        10.64
+      ],
+      "size": 1.36,
+      "brightness": 0.67
+    },
+    {
+      "id": "demo-006",
+      "name": "Stay",
+      "artist": "The Kid LAROI & Justin Bieber",
+      "genre": "pop",
+      "position": [
+        29.25,
+        -4.57,
+        16.72
+      ],
+      "size": 1.2,
+      "brightness": 0.58
+    },
+    {
+      "id": "demo-007",
+      "name": "Shape of You",
+      "artist": "Ed Sheeran",
+      "genre": "pop",
+      "position": [
+        27,
+        8.33,
+        9.21
+      ],
+      "size": 0.45,
+      "brightness": 1
+    },
+    {
+      "id": "demo-008",
+      "name": "As It Was",
+      "artist": "Harry Styles",
+      "genre": "pop",
+      "position": [
+        28.06,
+        -8.82,
+        10.18
+      ],
+      "size": 1.46,
+      "brightness": 0.7
+    },
+    {
+      "id": "demo-009",
+      "name": "Save Your Tears",
+      "artist": "The Weeknd",
+      "genre": "pop",
+      "position": [
+        29.88,
+        3.46,
+        12.69
+      ],
+      "size": 0.35,
+      "brightness": 0.57
+    },
+    {
+      "id": "demo-010",
+      "name": "Dont Start Now",
+      "artist": "Dua Lipa",
+      "genre": "pop",
+      "position": [
+        26.53,
+        -8.33,
+        14.54
+      ],
+      "size": 1.97,
+      "brightness": 0.67
+    },
+    {
+      "id": "demo-011",
+      "name": "Cruel Summer",
+      "artist": "Taylor Swift",
+      "genre": "pop",
+      "position": [
+        29.65,
+        3.88,
+        4.25
+      ],
+      "size": 1.87,
+      "brightness": 0.73
+    },
+    {
+      "id": "demo-012",
+      "name": "Starboy",
+      "artist": "The Weeknd",
+      "genre": "pop",
+      "position": [
+        29.54,
+        2.25,
+        6.39
+      ],
+      "size": 1.71,
+      "brightness": 0.77
+    },
+    {
+      "id": "demo-013",
+      "name": "drivers license",
+      "artist": "Olivia Rodrigo",
+      "genre": "pop",
+      "position": [
+        25.75,
+        -7.21,
+        6.94
+      ],
+      "size": 0.41,
+      "brightness": 0.74
+    },
+    {
+      "id": "demo-014",
+      "name": "Peaches",
+      "artist": "Justin Bieber",
+      "genre": "pop",
+      "position": [
+        36.25,
+        -3.22,
+        15.84
+      ],
+      "size": 0.51,
+      "brightness": 0.71
+    },
+    {
+      "id": "demo-015",
+      "name": "Dance Monkey",
+      "artist": "Tones and I",
+      "genre": "pop",
+      "position": [
+        23.36,
+        -5.58,
+        13.8
+      ],
+      "size": 0.33,
+      "brightness": 0.74
+    },
+    {
+      "id": "demo-016",
+      "name": "Shivers",
+      "artist": "Ed Sheeran",
+      "genre": "pop",
+      "position": [
+        26.93,
+        -8.25,
+        13.87
+      ],
+      "size": 0.97,
+      "brightness": 0.54
+    },
+    {
+      "id": "demo-017",
+      "name": "Flowers",
+      "artist": "Miley Cyrus",
+      "genre": "pop",
+      "position": [
+        27.37,
+        -6.26,
+        4.34
+      ],
+      "size": 0.65,
+      "brightness": 0.64
+    },
+    {
+      "id": "demo-018",
+      "name": "Kill Bill",
+      "artist": "SZA",
+      "genre": "pop",
+      "position": [
+        30.24,
+        -4.52,
+        12.43
+      ],
+      "size": 0.91,
+      "brightness": 0.61
+    },
+    {
+      "id": "demo-019",
+      "name": "Heat Waves",
+      "artist": "Glass Animals",
+      "genre": "pop",
+      "position": [
+        33.82,
+        -0.23,
+        4.89
+      ],
+      "size": 1.13,
+      "brightness": 0.68
+    },
+    {
+      "id": "demo-020",
+      "name": "Uptown Funk",
+      "artist": "Bruno Mars",
+      "genre": "pop",
+      "position": [
+        23.97,
+        -6.04,
+        5.47
+      ],
+      "size": 0.48,
+      "brightness": 0.86
+    },
+    {
+      "id": "demo-021",
+      "name": "24K Magic",
+      "artist": "Bruno Mars",
+      "genre": "pop",
+      "position": [
+        36.67,
+        -7.04,
+        16.23
+      ],
+      "size": 1.85,
+      "brightness": 0.98
+    },
+    {
+      "id": "demo-022",
+      "name": "Physical",
+      "artist": "Dua Lipa",
+      "genre": "pop",
+      "position": [
+        30.36,
+        1.89,
+        11
+      ],
+      "size": 1.97,
+      "brightness": 0.67
+    },
+    {
+      "id": "demo-023",
+      "name": "good 4 u",
+      "artist": "Olivia Rodrigo",
+      "genre": "pop",
+      "position": [
+        27.8,
+        1.71,
+        14.39
+      ],
+      "size": 1.96,
+      "brightness": 0.57
+    },
+    {
+      "id": "demo-024",
+      "name": "Vampire",
+      "artist": "Olivia Rodrigo",
+      "genre": "pop",
+      "position": [
+        36.83,
+        2.52,
+        13.25
+      ],
+      "size": 1.65,
+      "brightness": 0.63
+    },
+    {
+      "id": "demo-025",
+      "name": "About Damn Time",
+      "artist": "Lizzo",
+      "genre": "pop",
+      "position": [
+        25.43,
+        -3.29,
+        8.69
+      ],
+      "size": 1.07,
+      "brightness": 0.82
+    },
+    {
+      "id": "demo-026",
+      "name": "Espresso",
+      "artist": "Sabrina Carpenter",
+      "genre": "pop",
+      "position": [
+        28.2,
+        5.35,
+        12.19
+      ],
+      "size": 1.27,
+      "brightness": 0.8
+    },
+    {
+      "id": "demo-027",
+      "name": "Shake It Off",
+      "artist": "Taylor Swift",
+      "genre": "pop",
+      "position": [
+        24.4,
+        3.48,
+        6.43
+      ],
+      "size": 1.17,
+      "brightness": 0.53
+    },
+    {
+      "id": "demo-028",
+      "name": "New Rules",
+      "artist": "Dua Lipa",
+      "genre": "pop",
+      "position": [
+        27.81,
+        3.11,
+        18.37
+      ],
+      "size": 1.08,
+      "brightness": 0.87
+    },
+    {
+      "id": "demo-029",
+      "name": "Someone Like You",
+      "artist": "Adele",
+      "genre": "pop",
+      "position": [
+        28.67,
+        -7.63,
+        3.06
+      ],
+      "size": 0.92,
+      "brightness": 0.69
+    },
+    {
+      "id": "demo-030",
+      "name": "Rolling in the Deep",
+      "artist": "Adele",
+      "genre": "pop",
+      "position": [
+        31.64,
+        -2,
+        8.7
+      ],
+      "size": 0.74,
+      "brightness": 0.81
+    },
+    {
+      "id": "demo-031",
+      "name": "Easy On Me",
+      "artist": "Adele",
+      "genre": "pop",
+      "position": [
+        16.55,
+        3.45,
+        15.5
+      ],
+      "size": 1.94,
+      "brightness": 0.73
+    },
+    {
+      "id": "demo-032",
+      "name": "Butter",
+      "artist": "BTS",
+      "genre": "pop",
+      "position": [
+        34.58,
+        13.22,
+        4.22
+      ],
+      "size": 0.99,
+      "brightness": 0.77
+    },
+    {
+      "id": "demo-033",
+      "name": "Dynamite",
+      "artist": "BTS",
+      "genre": "pop",
+      "position": [
+        26.09,
+        3.35,
+        11.23
+      ],
+      "size": 1.95,
+      "brightness": 0.72
+    },
+    {
+      "id": "demo-034",
+      "name": "positions",
+      "artist": "Ariana Grande",
+      "genre": "pop",
+      "position": [
+        19.7,
+        0.94,
+        6.74
+      ],
+      "size": 1.98,
+      "brightness": 0.9
+    },
+    {
+      "id": "demo-035",
+      "name": "7 rings",
+      "artist": "Ariana Grande",
+      "genre": "pop",
+      "position": [
+        27.54,
+        10.39,
+        14.26
+      ],
+      "size": 1.56,
+      "brightness": 0.93
+    },
+    {
+      "id": "demo-036",
+      "name": "Everlong",
+      "artist": "Foo Fighters",
+      "genre": "rock",
+      "position": [
+        -34.68,
+        1.59,
+        -27.5
+      ],
+      "size": 1.54,
+      "brightness": 0.86
+    },
+    {
+      "id": "demo-037",
+      "name": "Do I Wanna Know?",
+      "artist": "Arctic Monkeys",
+      "genre": "rock",
+      "position": [
+        -32.59,
+        2.57,
+        -18.12
+      ],
+      "size": 1.68,
+      "brightness": 0.63
+    },
+    {
+      "id": "demo-038",
+      "name": "Under the Bridge",
+      "artist": "Red Hot Chili Peppers",
+      "genre": "rock",
+      "position": [
+        -29.78,
+        -1.24,
+        -26.01
+      ],
+      "size": 0.5,
+      "brightness": 0.8
+    },
+    {
+      "id": "demo-039",
+      "name": "Creep",
+      "artist": "Radiohead",
+      "genre": "rock",
+      "position": [
+        -20.02,
+        0.72,
+        -13.77
+      ],
+      "size": 0.35,
+      "brightness": 0.55
+    },
+    {
+      "id": "demo-040",
+      "name": "Mr. Brightside",
+      "artist": "The Killers",
+      "genre": "rock",
+      "position": [
+        -27.74,
+        2.15,
+        -16.05
+      ],
+      "size": 0.95,
+      "brightness": 0.56
+    },
+    {
+      "id": "demo-041",
+      "name": "Seven Nation Army",
+      "artist": "The White Stripes",
+      "genre": "rock",
+      "position": [
+        -32.3,
+        3.21,
+        -18.63
+      ],
+      "size": 0.39,
+      "brightness": 0.85
+    },
+    {
+      "id": "demo-042",
+      "name": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "genre": "rock",
+      "position": [
+        -21.94,
+        2.5,
+        -19.33
+      ],
+      "size": 1.98,
+      "brightness": 0.64
+    },
+    {
+      "id": "demo-043",
+      "name": "Smells Like Teen Spirit",
+      "artist": "Nirvana",
+      "genre": "rock",
+      "position": [
+        -25.91,
+        2.12,
+        -27.16
+      ],
+      "size": 1.3,
+      "brightness": 0.8
+    },
+    {
+      "id": "demo-044",
+      "name": "Come As You Are",
+      "artist": "Nirvana",
+      "genre": "rock",
+      "position": [
+        -28.45,
+        -2.23,
+        -23.07
+      ],
+      "size": 1.52,
+      "brightness": 0.89
+    },
+    {
+      "id": "demo-045",
+      "name": "Californication",
+      "artist": "Red Hot Chili Peppers",
+      "genre": "rock",
+      "position": [
+        -27.36,
+        2.37,
+        -29.16
+      ],
+      "size": 1.58,
+      "brightness": 0.98
+    },
+    {
+      "id": "demo-046",
+      "name": "The Pretender",
+      "artist": "Foo Fighters",
+      "genre": "rock",
+      "position": [
+        -27.13,
+        10.74,
+        -21.71
+      ],
+      "size": 0.64,
+      "brightness": 0.87
+    },
+    {
+      "id": "demo-047",
+      "name": "505",
+      "artist": "Arctic Monkeys",
+      "genre": "rock",
+      "position": [
+        -31.73,
+        11.14,
+        -13.21
+      ],
+      "size": 1.58,
+      "brightness": 0.85
+    },
+    {
+      "id": "demo-048",
+      "name": "Karma Police",
+      "artist": "Radiohead",
+      "genre": "rock",
+      "position": [
+        -27.11,
+        -0.59,
+        -19.08
+      ],
+      "size": 1.56,
+      "brightness": 0.83
+    },
+    {
+      "id": "demo-049",
+      "name": "Yellow",
+      "artist": "Coldplay",
+      "genre": "rock",
+      "position": [
+        -21.05,
+        3.04,
+        -17.35
+      ],
+      "size": 1.81,
+      "brightness": 0.68
+    },
+    {
+      "id": "demo-050",
+      "name": "The Scientist",
+      "artist": "Coldplay",
+      "genre": "rock",
+      "position": [
+        -25.76,
+        5.88,
+        -18.1
+      ],
+      "size": 0.93,
+      "brightness": 0.53
+    },
+    {
+      "id": "demo-051",
+      "name": "Viva la Vida",
+      "artist": "Coldplay",
+      "genre": "rock",
+      "position": [
+        -29.22,
+        6.13,
+        -19.33
+      ],
+      "size": 0.76,
+      "brightness": 0.81
+    },
+    {
+      "id": "demo-052",
+      "name": "Black Hole Sun",
+      "artist": "Soundgarden",
+      "genre": "rock",
+      "position": [
+        -21.86,
+        0.66,
+        -22.16
+      ],
+      "size": 0.76,
+      "brightness": 0.66
+    },
+    {
+      "id": "demo-053",
+      "name": "Hysteria",
+      "artist": "Muse",
+      "genre": "rock",
+      "position": [
+        -25.15,
+        -1.7,
+        -10.72
+      ],
+      "size": 0.64,
+      "brightness": 0.92
+    },
+    {
+      "id": "demo-054",
+      "name": "Supermassive Black Hole",
+      "artist": "Muse",
+      "genre": "rock",
+      "position": [
+        -26.46,
+        20.18,
+        -20.91
+      ],
+      "size": 1.34,
+      "brightness": 0.95
+    },
+    {
+      "id": "demo-055",
+      "name": "Take Me Out",
+      "artist": "Franz Ferdinand",
+      "genre": "rock",
+      "position": [
+        -31.3,
+        8.19,
+        -19.85
+      ],
+      "size": 1.76,
+      "brightness": 0.78
+    },
+    {
+      "id": "demo-056",
+      "name": "Reptilia",
+      "artist": "The Strokes",
+      "genre": "rock",
+      "position": [
+        -16.25,
+        -0.56,
+        -16.37
+      ],
+      "size": 1.8,
+      "brightness": 0.95
+    },
+    {
+      "id": "demo-057",
+      "name": "Last Nite",
+      "artist": "The Strokes",
+      "genre": "rock",
+      "position": [
+        -23.99,
+        3.61,
+        -12.11
+      ],
+      "size": 1.98,
+      "brightness": 0.6
+    },
+    {
+      "id": "demo-058",
+      "name": "Someday",
+      "artist": "The Strokes",
+      "genre": "rock",
+      "position": [
+        -23.51,
+        7.34,
+        -22.29
+      ],
+      "size": 0.76,
+      "brightness": 0.97
+    },
+    {
+      "id": "demo-059",
+      "name": "Are You Gonna Be My Girl",
+      "artist": "Jet",
+      "genre": "rock",
+      "position": [
+        -15.89,
+        15.93,
+        -19.25
+      ],
+      "size": 1.62,
+      "brightness": 0.99
+    },
+    {
+      "id": "demo-060",
+      "name": "In Bloom",
+      "artist": "Nirvana",
+      "genre": "rock",
+      "position": [
+        -31.4,
+        10.96,
+        -15.73
+      ],
+      "size": 1.6,
+      "brightness": 0.56
+    },
+    {
+      "id": "demo-061",
+      "name": "Wish You Were Here",
+      "artist": "Pink Floyd",
+      "genre": "rock",
+      "position": [
+        -18.37,
+        -0.93,
+        -21.51
+      ],
+      "size": 0.69,
+      "brightness": 0.75
+    },
+    {
+      "id": "demo-062",
+      "name": "Comfortably Numb",
+      "artist": "Pink Floyd",
+      "genre": "rock",
+      "position": [
+        -28.45,
+        4.7,
+        -25.96
+      ],
+      "size": 1.63,
+      "brightness": 0.76
+    },
+    {
+      "id": "demo-063",
+      "name": "Thunder",
+      "artist": "Imagine Dragons",
+      "genre": "rock",
+      "position": [
+        -26.6,
+        0.93,
+        -21.87
+      ],
+      "size": 1.05,
+      "brightness": 0.91
+    },
+    {
+      "id": "demo-064",
+      "name": "Believer",
+      "artist": "Imagine Dragons",
+      "genre": "rock",
+      "position": [
+        -18.6,
+        2.93,
+        -13.76
+      ],
+      "size": 0.72,
+      "brightness": 0.93
+    },
+    {
+      "id": "demo-065",
+      "name": "Radioactive",
+      "artist": "Imagine Dragons",
+      "genre": "rock",
+      "position": [
+        -18.61,
+        5.16,
+        -20.8
+      ],
+      "size": 1.76,
+      "brightness": 0.63
+    },
+    {
+      "id": "demo-066",
+      "name": "HUMBLE.",
+      "artist": "Kendrick Lamar",
+      "genre": "hiphop",
+      "position": [
+        1.87,
+        -15.21,
+        34.9
+      ],
+      "size": 1.4,
+      "brightness": 0.91
+    },
+    {
+      "id": "demo-067",
+      "name": "Gods Plan",
+      "artist": "Drake",
+      "genre": "hiphop",
+      "position": [
+        0.81,
+        -13.44,
+        25.42
+      ],
+      "size": 1.19,
+      "brightness": 0.85
+    },
+    {
+      "id": "demo-068",
+      "name": "See You Again",
+      "artist": "Tyler, The Creator",
+      "genre": "hiphop",
+      "position": [
+        0.46,
+        -16.76,
+        26.65
+      ],
+      "size": 0.89,
+      "brightness": 0.74
+    },
+    {
+      "id": "demo-069",
+      "name": "No Role Modelz",
+      "artist": "J. Cole",
+      "genre": "hiphop",
+      "position": [
+        -0.13,
+        -14.8,
+        32.79
+      ],
+      "size": 0.53,
+      "brightness": 0.7
+    },
+    {
+      "id": "demo-070",
+      "name": "SICKO MODE",
+      "artist": "Travis Scott",
+      "genre": "hiphop",
+      "position": [
+        -1.38,
+        -13.3,
+        33.46
+      ],
+      "size": 1.78,
+      "brightness": 0.55
+    },
+    {
+      "id": "demo-071",
+      "name": "Hotline Bling",
+      "artist": "Drake",
+      "genre": "hiphop",
+      "position": [
+        -1.62,
+        -13.58,
+        35.69
+      ],
+      "size": 1.46,
+      "brightness": 0.58
+    },
+    {
+      "id": "demo-072",
+      "name": "Alright",
+      "artist": "Kendrick Lamar",
+      "genre": "hiphop",
+      "position": [
+        -1.58,
+        -8.62,
+        40.05
+      ],
+      "size": 0.98,
+      "brightness": 0.66
+    },
+    {
+      "id": "demo-073",
+      "name": "EARFQUAKE",
+      "artist": "Tyler, The Creator",
+      "genre": "hiphop",
+      "position": [
+        -2.91,
+        -11.87,
+        38.07
+      ],
+      "size": 1.76,
+      "brightness": 0.92
+    },
+    {
+      "id": "demo-074",
+      "name": "DNA.",
+      "artist": "Kendrick Lamar",
+      "genre": "hiphop",
+      "position": [
+        -4.24,
+        -15.66,
+        21.28
+      ],
+      "size": 1.46,
+      "brightness": 0.8
+    },
+    {
+      "id": "demo-075",
+      "name": "Money Trees",
+      "artist": "Kendrick Lamar",
+      "genre": "hiphop",
+      "position": [
+        -6.58,
+        -10.8,
+        32.99
+      ],
+      "size": 1.47,
+      "brightness": 0.77
+    },
+    {
+      "id": "demo-076",
+      "name": "m.A.A.d city",
+      "artist": "Kendrick Lamar",
+      "genre": "hiphop",
+      "position": [
+        -0.15,
+        -13.67,
+        31.9
+      ],
+      "size": 0.34,
+      "brightness": 0.63
+    },
+    {
+      "id": "demo-077",
+      "name": "Started From the Bottom",
+      "artist": "Drake",
+      "genre": "hiphop",
+      "position": [
+        -0.4,
+        -18.27,
+        33.57
+      ],
+      "size": 1.81,
+      "brightness": 0.95
+    },
+    {
+      "id": "demo-078",
+      "name": "Mask Off",
+      "artist": "Future",
+      "genre": "hiphop",
+      "position": [
+        0.8,
+        -16.47,
+        39.06
+      ],
+      "size": 1.44,
+      "brightness": 0.72
+    },
+    {
+      "id": "demo-079",
+      "name": "Congratulations",
+      "artist": "Post Malone",
+      "genre": "hiphop",
+      "position": [
+        -0.13,
+        -12.27,
+        32.94
+      ],
+      "size": 1.57,
+      "brightness": 0.77
+    },
+    {
+      "id": "demo-080",
+      "name": "Rockstar",
+      "artist": "Post Malone",
+      "genre": "hiphop",
+      "position": [
+        10.54,
+        -19.74,
+        26.29
+      ],
+      "size": 0.45,
+      "brightness": 0.62
+    },
+    {
+      "id": "demo-081",
+      "name": "Sunflower",
+      "artist": "Post Malone & Swae Lee",
+      "genre": "hiphop",
+      "position": [
+        1.47,
+        -12.1,
+        30.27
+      ],
+      "size": 1.57,
+      "brightness": 0.53
+    },
+    {
+      "id": "demo-082",
+      "name": "Old Town Road",
+      "artist": "Lil Nas X",
+      "genre": "hiphop",
+      "position": [
+        -1.33,
+        -20.83,
+        26.35
+      ],
+      "size": 1.36,
+      "brightness": 0.53
+    },
+    {
+      "id": "demo-083",
+      "name": "MONTERO",
+      "artist": "Lil Nas X",
+      "genre": "hiphop",
+      "position": [
+        3.21,
+        -9.81,
+        28.01
+      ],
+      "size": 1.93,
+      "brightness": 0.67
+    },
+    {
+      "id": "demo-084",
+      "name": "Big Pimpin",
+      "artist": "JAY-Z",
+      "genre": "hiphop",
+      "position": [
+        1.36,
+        -24.11,
+        32.94
+      ],
+      "size": 1.47,
+      "brightness": 0.65
+    },
+    {
+      "id": "demo-085",
+      "name": "Juicy",
+      "artist": "The Notorious B.I.G.",
+      "genre": "hiphop",
+      "position": [
+        -1.02,
+        -4.45,
+        43.33
+      ],
+      "size": 1.96,
+      "brightness": 0.62
+    },
+    {
+      "id": "demo-086",
+      "name": "Lose Yourself",
+      "artist": "Eminem",
+      "genre": "hiphop",
+      "position": [
+        2.48,
+        -4.13,
+        37.1
+      ],
+      "size": 1.33,
+      "brightness": 0.63
+    },
+    {
+      "id": "demo-087",
+      "name": "Without Me",
+      "artist": "Eminem",
+      "genre": "hiphop",
+      "position": [
+        2.57,
+        -14.09,
+        30.28
+      ],
+      "size": 1.11,
+      "brightness": 0.66
+    },
+    {
+      "id": "demo-088",
+      "name": "In Da Club",
+      "artist": "50 Cent",
+      "genre": "hiphop",
+      "position": [
+        7.31,
+        -4.55,
+        34.36
+      ],
+      "size": 1.65,
+      "brightness": 0.5
+    },
+    {
+      "id": "demo-089",
+      "name": "Nonstop",
+      "artist": "Drake",
+      "genre": "hiphop",
+      "position": [
+        -3.84,
+        -9.03,
+        28.05
+      ],
+      "size": 0.59,
+      "brightness": 0.96
+    },
+    {
+      "id": "demo-090",
+      "name": "Passionfruit",
+      "artist": "Drake",
+      "genre": "hiphop",
+      "position": [
+        -6.08,
+        -22.8,
+        34.93
+      ],
+      "size": 0.44,
+      "brightness": 0.83
+    },
+    {
+      "id": "demo-091",
+      "name": "Middle Child",
+      "artist": "J. Cole",
+      "genre": "hiphop",
+      "position": [
+        -7.11,
+        -20.07,
+        28.85
+      ],
+      "size": 0.5,
+      "brightness": 0.72
+    },
+    {
+      "id": "demo-092",
+      "name": "Power",
+      "artist": "Kanye West",
+      "genre": "hiphop",
+      "position": [
+        5.15,
+        -19.72,
+        30.58
+      ],
+      "size": 1.22,
+      "brightness": 0.64
+    },
+    {
+      "id": "demo-093",
+      "name": "Stronger",
+      "artist": "Kanye West",
+      "genre": "hiphop",
+      "position": [
+        5.08,
+        -9.12,
+        28.56
+      ],
+      "size": 1.36,
+      "brightness": 0.74
+    },
+    {
+      "id": "demo-094",
+      "name": "Runaway",
+      "artist": "Kanye West",
+      "genre": "hiphop",
+      "position": [
+        -4.61,
+        -12.58,
+        26.47
+      ],
+      "size": 0.64,
+      "brightness": 0.65
+    },
+    {
+      "id": "demo-095",
+      "name": "goosebumps",
+      "artist": "Travis Scott",
+      "genre": "hiphop",
+      "position": [
+        4.86,
+        -10.9,
+        34.07
+      ],
+      "size": 1.14,
+      "brightness": 0.75
+    },
+    {
+      "id": "demo-096",
+      "name": "Praise The Lord",
+      "artist": "A$AP Rocky",
+      "genre": "hiphop",
+      "position": [
+        -7.33,
+        -11.82,
+        24.48
+      ],
+      "size": 1.11,
+      "brightness": 0.91
+    },
+    {
+      "id": "demo-097",
+      "name": "XO Tour Llif3",
+      "artist": "Lil Uzi Vert",
+      "genre": "hiphop",
+      "position": [
+        6.79,
+        -8.39,
+        23.07
+      ],
+      "size": 1.67,
+      "brightness": 0.96
+    },
+    {
+      "id": "demo-098",
+      "name": "Bad and Boujee",
+      "artist": "Migos",
+      "genre": "hiphop",
+      "position": [
+        -4.19,
+        -12.75,
+        29.05
+      ],
+      "size": 1.02,
+      "brightness": 0.63
+    },
+    {
+      "id": "demo-099",
+      "name": "Lucid Dreams",
+      "artist": "Juice WRLD",
+      "genre": "hiphop",
+      "position": [
+        4.54,
+        -10.96,
+        25.36
+      ],
+      "size": 1.91,
+      "brightness": 0.76
+    },
+    {
+      "id": "demo-100",
+      "name": "Robbery",
+      "artist": "Juice WRLD",
+      "genre": "hiphop",
+      "position": [
+        -2.66,
+        -12.09,
+        33.39
+      ],
+      "size": 0.37,
+      "brightness": 0.66
+    },
+    {
+      "id": "demo-101",
+      "name": "Around the World",
+      "artist": "Daft Punk",
+      "genre": "electronic",
+      "position": [
+        -6.44,
+        14.28,
+        -18.42
+      ],
+      "size": 0.89,
+      "brightness": 0.55
+    },
+    {
+      "id": "demo-102",
+      "name": "Strobe",
+      "artist": "Deadmau5",
+      "genre": "electronic",
+      "position": [
+        -21.15,
+        17.13,
+        -8.81
+      ],
+      "size": 0.64,
+      "brightness": 0.98
+    },
+    {
+      "id": "demo-103",
+      "name": "Say My Name",
+      "artist": "ODESZA",
+      "genre": "electronic",
+      "position": [
+        -6.99,
+        21.84,
+        -12.28
+      ],
+      "size": 0.46,
+      "brightness": 0.89
+    },
+    {
+      "id": "demo-104",
+      "name": "Never Be Like You",
+      "artist": "Flume",
+      "genre": "electronic",
+      "position": [
+        -13.67,
+        13.63,
+        -12.12
+      ],
+      "size": 1.8,
+      "brightness": 0.66
+    },
+    {
+      "id": "demo-105",
+      "name": "Midnight City",
+      "artist": "M83",
+      "genre": "electronic",
+      "position": [
+        -12.5,
+        17.84,
+        -12.68
+      ],
+      "size": 0.42,
+      "brightness": 0.94
+    },
+    {
+      "id": "demo-106",
+      "name": "Get Lucky",
+      "artist": "Daft Punk",
+      "genre": "electronic",
+      "position": [
+        -8.46,
+        33.09,
+        -11.3
+      ],
+      "size": 1.02,
+      "brightness": 0.99
+    },
+    {
+      "id": "demo-107",
+      "name": "One More Time",
+      "artist": "Daft Punk",
+      "genre": "electronic",
+      "position": [
+        -15.15,
+        21.73,
+        -22.03
+      ],
+      "size": 0.32,
+      "brightness": 0.54
+    },
+    {
+      "id": "demo-108",
+      "name": "Lean On",
+      "artist": "Major Lazer & DJ Snake",
+      "genre": "electronic",
+      "position": [
+        -10.76,
+        21.88,
+        -10.51
+      ],
+      "size": 1.33,
+      "brightness": 0.57
+    },
+    {
+      "id": "demo-109",
+      "name": "Scary Monsters and Nice Sprites",
+      "artist": "Skrillex",
+      "genre": "electronic",
+      "position": [
+        -13.42,
+        21.81,
+        -29.06
+      ],
+      "size": 0.31,
+      "brightness": 0.66
+    },
+    {
+      "id": "demo-110",
+      "name": "Bangarang",
+      "artist": "Skrillex",
+      "genre": "electronic",
+      "position": [
+        -9.79,
+        23.65,
+        -19.86
+      ],
+      "size": 0.61,
+      "brightness": 0.73
+    },
+    {
+      "id": "demo-111",
+      "name": "Levels",
+      "artist": "Avicii",
+      "genre": "electronic",
+      "position": [
+        -6.71,
+        20.07,
+        -11.59
+      ],
+      "size": 0.84,
+      "brightness": 0.96
+    },
+    {
+      "id": "demo-112",
+      "name": "Wake Me Up",
+      "artist": "Avicii",
+      "genre": "electronic",
+      "position": [
+        -13.93,
+        18.52,
+        -11.06
+      ],
+      "size": 1.73,
+      "brightness": 0.58
+    },
+    {
+      "id": "demo-113",
+      "name": "Titanium",
+      "artist": "David Guetta & Sia",
+      "genre": "electronic",
+      "position": [
+        -20.32,
+        22.83,
+        -8.08
+      ],
+      "size": 0.52,
+      "brightness": 0.54
+    },
+    {
+      "id": "demo-114",
+      "name": "Faded",
+      "artist": "Alan Walker",
+      "genre": "electronic",
+      "position": [
+        -1.61,
+        20.51,
+        -18.33
+      ],
+      "size": 0.7,
+      "brightness": 0.84
+    },
+    {
+      "id": "demo-115",
+      "name": "Alone",
+      "artist": "Marshmello",
+      "genre": "electronic",
+      "position": [
+        -14.31,
+        25.13,
+        -6.35
+      ],
+      "size": 0.68,
+      "brightness": 0.83
+    },
+    {
+      "id": "demo-116",
+      "name": "Roses",
+      "artist": "The Chainsmokers",
+      "genre": "electronic",
+      "position": [
+        -9.06,
+        17.04,
+        -11.24
+      ],
+      "size": 1.12,
+      "brightness": 0.69
+    },
+    {
+      "id": "demo-117",
+      "name": "Closer",
+      "artist": "The Chainsmokers",
+      "genre": "electronic",
+      "position": [
+        -6.15,
+        13.86,
+        -13.61
+      ],
+      "size": 0.92,
+      "brightness": 0.87
+    },
+    {
+      "id": "demo-118",
+      "name": "Something Just Like This",
+      "artist": "The Chainsmokers & Coldplay",
+      "genre": "electronic",
+      "position": [
+        -12.36,
+        28.58,
+        -13.91
+      ],
+      "size": 1.87,
+      "brightness": 0.87
+    },
+    {
+      "id": "demo-119",
+      "name": "Innerbloom",
+      "artist": "RUFUS DU SOL",
+      "genre": "electronic",
+      "position": [
+        -12.91,
+        24.94,
+        -14.7
+      ],
+      "size": 1.15,
+      "brightness": 0.72
+    },
+    {
+      "id": "demo-120",
+      "name": "Alive",
+      "artist": "RUFUS DU SOL",
+      "genre": "electronic",
+      "position": [
+        -13.52,
+        29.13,
+        -10.71
+      ],
+      "size": 1.03,
+      "brightness": 0.65
+    },
+    {
+      "id": "demo-121",
+      "name": "You & Me",
+      "artist": "Disclosure",
+      "genre": "electronic",
+      "position": [
+        -14.57,
+        21.71,
+        -18.53
+      ],
+      "size": 0.72,
+      "brightness": 0.9
+    },
+    {
+      "id": "demo-122",
+      "name": "Latch",
+      "artist": "Disclosure & Sam Smith",
+      "genre": "electronic",
+      "position": [
+        -8.13,
+        24.6,
+        -14.52
+      ],
+      "size": 1.66,
+      "brightness": 0.58
+    },
+    {
+      "id": "demo-123",
+      "name": "Tennis Court",
+      "artist": "Flume Remix",
+      "genre": "electronic",
+      "position": [
+        -12.59,
+        24.4,
+        -19.28
+      ],
+      "size": 1.82,
+      "brightness": 0.79
+    },
+    {
+      "id": "demo-124",
+      "name": "Hyperreal",
+      "artist": "Flume",
+      "genre": "electronic",
+      "position": [
+        -15.12,
+        16.04,
+        -13.97
+      ],
+      "size": 1.1,
+      "brightness": 0.56
+    },
+    {
+      "id": "demo-125",
+      "name": "Ghosts n Stuff",
+      "artist": "Deadmau5",
+      "genre": "electronic",
+      "position": [
+        -3.51,
+        9.28,
+        -8.29
+      ],
+      "size": 1.73,
+      "brightness": 0.61
+    },
+    {
+      "id": "demo-126",
+      "name": "Divinity",
+      "artist": "Porter Robinson",
+      "genre": "electronic",
+      "position": [
+        -4.87,
+        14.54,
+        -14.44
+      ],
+      "size": 1.74,
+      "brightness": 0.56
+    },
+    {
+      "id": "demo-127",
+      "name": "Shelter",
+      "artist": "Porter Robinson & Madeon",
+      "genre": "electronic",
+      "position": [
+        -6.53,
+        22.19,
+        -20.28
+      ],
+      "size": 0.35,
+      "brightness": 0.93
+    },
+    {
+      "id": "demo-128",
+      "name": "All We Need",
+      "artist": "ODESZA",
+      "genre": "electronic",
+      "position": [
+        -24.1,
+        25.63,
+        -21.3
+      ],
+      "size": 1.59,
+      "brightness": 0.96
+    },
+    {
+      "id": "demo-129",
+      "name": "Line of Sight",
+      "artist": "ODESZA",
+      "genre": "electronic",
+      "position": [
+        -9.02,
+        11.23,
+        -15.58
+      ],
+      "size": 1.3,
+      "brightness": 0.7
+    },
+    {
+      "id": "demo-130",
+      "name": "Cola",
+      "artist": "CamelPhat & Elderbrook",
+      "genre": "electronic",
+      "position": [
+        -11.12,
+        24.2,
+        -8.15
+      ],
+      "size": 1.09,
+      "brightness": 0.96
+    },
+    {
+      "id": "demo-131",
+      "name": "Opus",
+      "artist": "Eric Prydz",
+      "genre": "electronic",
+      "position": [
+        -9.97,
+        18.01,
+        -22.99
+      ],
+      "size": 1.62,
+      "brightness": 0.63
+    },
+    {
+      "id": "demo-132",
+      "name": "Insomnia",
+      "artist": "Faithless",
+      "genre": "electronic",
+      "position": [
+        2.58,
+        14.62,
+        -1.84
+      ],
+      "size": 0.8,
+      "brightness": 0.93
+    },
+    {
+      "id": "demo-133",
+      "name": "Sandstorm",
+      "artist": "Darude",
+      "genre": "electronic",
+      "position": [
+        -14.55,
+        21.56,
+        -18.26
+      ],
+      "size": 1.38,
+      "brightness": 0.54
+    },
+    {
+      "id": "demo-134",
+      "name": "Blue",
+      "artist": "Eiffel 65",
+      "genre": "electronic",
+      "position": [
+        -8.72,
+        30.33,
+        -13.4
+      ],
+      "size": 1.42,
+      "brightness": 0.62
+    },
+    {
+      "id": "demo-135",
+      "name": "Core",
+      "artist": "RL Grime",
+      "genre": "electronic",
+      "position": [
+        -4.7,
+        23.55,
+        -14.01
+      ],
+      "size": 1.07,
+      "brightness": 0.82
+    },
+    {
+      "id": "demo-136",
+      "name": "Thinkin Bout You",
+      "artist": "Frank Ocean",
+      "genre": "rnb",
+      "position": [
+        18.5,
+        -8.75,
+        -23.97
+      ],
+      "size": 1.98,
+      "brightness": 0.7
+    },
+    {
+      "id": "demo-137",
+      "name": "Kiss Me More",
+      "artist": "Doja Cat & SZA",
+      "genre": "rnb",
+      "position": [
+        16.93,
+        -3.51,
+        -22.76
+      ],
+      "size": 0.3,
+      "brightness": 0.62
+    },
+    {
+      "id": "demo-138",
+      "name": "Best Part",
+      "artist": "Daniel Caesar & H.E.R.",
+      "genre": "rnb",
+      "position": [
+        15.36,
+        -15.33,
+        -26.06
+      ],
+      "size": 1.42,
+      "brightness": 0.93
+    },
+    {
+      "id": "demo-139",
+      "name": "Good Days",
+      "artist": "SZA",
+      "genre": "rnb",
+      "position": [
+        26.7,
+        -4.01,
+        -26.65
+      ],
+      "size": 0.53,
+      "brightness": 0.96
+    },
+    {
+      "id": "demo-140",
+      "name": "Call Out My Name",
+      "artist": "The Weeknd",
+      "genre": "rnb",
+      "position": [
+        17.23,
+        -9.81,
+        -18.27
+      ],
+      "size": 1.07,
+      "brightness": 0.59
+    },
+    {
+      "id": "demo-141",
+      "name": "Nights",
+      "artist": "Frank Ocean",
+      "genre": "rnb",
+      "position": [
+        17.57,
+        -6.83,
+        -22.3
+      ],
+      "size": 1.56,
+      "brightness": 1
+    },
+    {
+      "id": "demo-142",
+      "name": "Pink + White",
+      "artist": "Frank Ocean",
+      "genre": "rnb",
+      "position": [
+        28.68,
+        -1.03,
+        -28.83
+      ],
+      "size": 1.65,
+      "brightness": 0.61
+    },
+    {
+      "id": "demo-143",
+      "name": "Self Control",
+      "artist": "Frank Ocean",
+      "genre": "rnb",
+      "position": [
+        20.78,
+        -7.55,
+        -30.15
+      ],
+      "size": 1.2,
+      "brightness": 0.53
+    },
+    {
+      "id": "demo-144",
+      "name": "After Hours",
+      "artist": "The Weeknd",
+      "genre": "rnb",
+      "position": [
+        31.26,
+        -13.14,
+        -25.71
+      ],
+      "size": 1.42,
+      "brightness": 0.96
+    },
+    {
+      "id": "demo-145",
+      "name": "The Hills",
+      "artist": "The Weeknd",
+      "genre": "rnb",
+      "position": [
+        17.5,
+        -15.98,
+        -23
+      ],
+      "size": 0.96,
+      "brightness": 0.51
+    },
+    {
+      "id": "demo-146",
+      "name": "Often",
+      "artist": "The Weeknd",
+      "genre": "rnb",
+      "position": [
+        15.2,
+        -11.9,
+        -25.11
+      ],
+      "size": 1.66,
+      "brightness": 0.83
+    },
+    {
+      "id": "demo-147",
+      "name": "Snooze",
+      "artist": "SZA",
+      "genre": "rnb",
+      "position": [
+        17.52,
+        -11.09,
+        -28.8
+      ],
+      "size": 1.29,
+      "brightness": 0.85
+    },
+    {
+      "id": "demo-148",
+      "name": "Love Galore",
+      "artist": "SZA",
+      "genre": "rnb",
+      "position": [
+        20.54,
+        -11.31,
+        -28.49
+      ],
+      "size": 2,
+      "brightness": 0.65
+    },
+    {
+      "id": "demo-149",
+      "name": "Shirt",
+      "artist": "SZA",
+      "genre": "rnb",
+      "position": [
+        14.32,
+        -10.15,
+        -21.12
+      ],
+      "size": 0.8,
+      "brightness": 0.86
+    },
+    {
+      "id": "demo-150",
+      "name": "Japanese Denim",
+      "artist": "Daniel Caesar",
+      "genre": "rnb",
+      "position": [
+        24.77,
+        -3.6,
+        -25.51
+      ],
+      "size": 1.85,
+      "brightness": 0.77
+    },
+    {
+      "id": "demo-151",
+      "name": "Get You",
+      "artist": "Daniel Caesar",
+      "genre": "rnb",
+      "position": [
+        22.59,
+        -14.38,
+        -23.17
+      ],
+      "size": 1.18,
+      "brightness": 0.63
+    },
+    {
+      "id": "demo-152",
+      "name": "Focus",
+      "artist": "H.E.R.",
+      "genre": "rnb",
+      "position": [
+        24.84,
+        -13.67,
+        -20
+      ],
+      "size": 1.01,
+      "brightness": 0.59
+    },
+    {
+      "id": "demo-153",
+      "name": "Damage",
+      "artist": "H.E.R.",
+      "genre": "rnb",
+      "position": [
+        32.51,
+        -8.84,
+        -31.66
+      ],
+      "size": 0.41,
+      "brightness": 0.9
+    },
+    {
+      "id": "demo-154",
+      "name": "Come Through",
+      "artist": "H.E.R.",
+      "genre": "rnb",
+      "position": [
+        23.44,
+        -11.56,
+        -22.39
+      ],
+      "size": 0.88,
+      "brightness": 0.8
+    },
+    {
+      "id": "demo-155",
+      "name": "Woman",
+      "artist": "Doja Cat",
+      "genre": "rnb",
+      "position": [
+        20.47,
+        -4.29,
+        -22.91
+      ],
+      "size": 1.07,
+      "brightness": 0.86
+    },
+    {
+      "id": "demo-156",
+      "name": "Say So",
+      "artist": "Doja Cat",
+      "genre": "rnb",
+      "position": [
+        18.96,
+        -7.24,
+        -24.42
+      ],
+      "size": 1.33,
+      "brightness": 0.89
+    },
+    {
+      "id": "demo-157",
+      "name": "Trip",
+      "artist": "Ella Mai",
+      "genre": "rnb",
+      "position": [
+        20.61,
+        -9.14,
+        -32.78
+      ],
+      "size": 0.9,
+      "brightness": 0.67
+    },
+    {
+      "id": "demo-158",
+      "name": "Boo'd Up",
+      "artist": "Ella Mai",
+      "genre": "rnb",
+      "position": [
+        20.06,
+        -19.59,
+        -20.41
+      ],
+      "size": 1.95,
+      "brightness": 0.57
+    },
+    {
+      "id": "demo-159",
+      "name": "Location",
+      "artist": "Khalid",
+      "genre": "rnb",
+      "position": [
+        15.82,
+        -3.34,
+        -32.91
+      ],
+      "size": 1.82,
+      "brightness": 0.87
+    },
+    {
+      "id": "demo-160",
+      "name": "Young Dumb & Broke",
+      "artist": "Khalid",
+      "genre": "rnb",
+      "position": [
+        20.64,
+        -9.84,
+        -17.26
+      ],
+      "size": 1.52,
+      "brightness": 0.59
+    },
+    {
+      "id": "demo-161",
+      "name": "Talk",
+      "artist": "Khalid",
+      "genre": "rnb",
+      "position": [
+        15.65,
+        -6.93,
+        -34.3
+      ],
+      "size": 0.55,
+      "brightness": 0.58
+    },
+    {
+      "id": "demo-162",
+      "name": "Streets",
+      "artist": "Doja Cat",
+      "genre": "rnb",
+      "position": [
+        19.4,
+        -17.35,
+        -19.47
+      ],
+      "size": 0.92,
+      "brightness": 0.78
+    },
+    {
+      "id": "demo-163",
+      "name": "On My Mind",
+      "artist": "Jorja Smith",
+      "genre": "rnb",
+      "position": [
+        18.52,
+        -16.09,
+        -21.27
+      ],
+      "size": 1.6,
+      "brightness": 0.63
+    },
+    {
+      "id": "demo-164",
+      "name": "Blue Lights",
+      "artist": "Jorja Smith",
+      "genre": "rnb",
+      "position": [
+        16.58,
+        -4.74,
+        -31.43
+      ],
+      "size": 2,
+      "brightness": 0.98
+    },
+    {
+      "id": "demo-165",
+      "name": "Exchange",
+      "artist": "Bryson Tiller",
+      "genre": "rnb",
+      "position": [
+        16.45,
+        -13.93,
+        -22.42
+      ],
+      "size": 1.27,
+      "brightness": 0.73
+    },
+    {
+      "id": "demo-166",
+      "name": "The Less I Know the Better",
+      "artist": "Tame Impala",
+      "genre": "indie",
+      "position": [
+        -28.22,
+        -11.56,
+        19.78
+      ],
+      "size": 0.81,
+      "brightness": 0.58
+    },
+    {
+      "id": "demo-167",
+      "name": "Chamber of Reflection",
+      "artist": "Mac DeMarco",
+      "genre": "indie",
+      "position": [
+        -14.07,
+        2.29,
+        12.48
+      ],
+      "size": 1.85,
+      "brightness": 0.74
+    },
+    {
+      "id": "demo-168",
+      "name": "Skinny Love",
+      "artist": "Bon Iver",
+      "genre": "indie",
+      "position": [
+        -16.87,
+        -5.08,
+        27.9
+      ],
+      "size": 1.27,
+      "brightness": 0.66
+    },
+    {
+      "id": "demo-169",
+      "name": "Motion Sickness",
+      "artist": "Phoebe Bridgers",
+      "genre": "indie",
+      "position": [
+        -18.63,
+        -4.36,
+        23.17
+      ],
+      "size": 0.42,
+      "brightness": 0.71
+    },
+    {
+      "id": "demo-170",
+      "name": "Electric Feel",
+      "artist": "MGMT",
+      "genre": "indie",
+      "position": [
+        -15.39,
+        -3.53,
+        23.83
+      ],
+      "size": 1.5,
+      "brightness": 0.68
+    },
+    {
+      "id": "demo-171",
+      "name": "Let It Happen",
+      "artist": "Tame Impala",
+      "genre": "indie",
+      "position": [
+        -22.15,
+        -10.5,
+        22.56
+      ],
+      "size": 1.62,
+      "brightness": 0.84
+    },
+    {
+      "id": "demo-172",
+      "name": "Borderline",
+      "artist": "Tame Impala",
+      "genre": "indie",
+      "position": [
+        -22.58,
+        -6.86,
+        24.05
+      ],
+      "size": 1.44,
+      "brightness": 0.54
+    },
+    {
+      "id": "demo-173",
+      "name": "Breathe Deeper",
+      "artist": "Tame Impala",
+      "genre": "indie",
+      "position": [
+        -24.06,
+        -6.61,
+        20.98
+      ],
+      "size": 1.08,
+      "brightness": 0.53
+    },
+    {
+      "id": "demo-174",
+      "name": "Salad Days",
+      "artist": "Mac DeMarco",
+      "genre": "indie",
+      "position": [
+        -17.73,
+        -13.35,
+        25.56
+      ],
+      "size": 1.26,
+      "brightness": 0.94
+    },
+    {
+      "id": "demo-175",
+      "name": "My Kind of Woman",
+      "artist": "Mac DeMarco",
+      "genre": "indie",
+      "position": [
+        -23.07,
+        -2.66,
+        27.03
+      ],
+      "size": 1.65,
+      "brightness": 0.82
+    },
+    {
+      "id": "demo-176",
+      "name": "Holocene",
+      "artist": "Bon Iver",
+      "genre": "indie",
+      "position": [
+        -18.19,
+        -1.94,
+        31.16
+      ],
+      "size": 0.94,
+      "brightness": 0.67
+    },
+    {
+      "id": "demo-177",
+      "name": "re: Stacks",
+      "artist": "Bon Iver",
+      "genre": "indie",
+      "position": [
+        -12.77,
+        -5.28,
+        22.69
+      ],
+      "size": 0.62,
+      "brightness": 0.54
+    },
+    {
+      "id": "demo-178",
+      "name": "Kyoto",
+      "artist": "Phoebe Bridgers",
+      "genre": "indie",
+      "position": [
+        -21,
+        -4.26,
+        18.32
+      ],
+      "size": 0.84,
+      "brightness": 0.53
+    },
+    {
+      "id": "demo-179",
+      "name": "I Know the End",
+      "artist": "Phoebe Bridgers",
+      "genre": "indie",
+      "position": [
+        -20.74,
+        -8.95,
+        30.57
+      ],
+      "size": 1.25,
+      "brightness": 0.85
+    },
+    {
+      "id": "demo-180",
+      "name": "Kids",
+      "artist": "MGMT",
+      "genre": "indie",
+      "position": [
+        -26.7,
+        0,
+        21.59
+      ],
+      "size": 0.56,
+      "brightness": 0.84
+    },
+    {
+      "id": "demo-181",
+      "name": "Time Moves Slow",
+      "artist": "BADBADNOTGOOD",
+      "genre": "indie",
+      "position": [
+        -21.43,
+        -13.58,
+        22.75
+      ],
+      "size": 0.3,
+      "brightness": 0.63
+    },
+    {
+      "id": "demo-182",
+      "name": "Something",
+      "artist": "Men I Trust",
+      "genre": "indie",
+      "position": [
+        -18.73,
+        2.18,
+        16.97
+      ],
+      "size": 0.65,
+      "brightness": 0.67
+    },
+    {
+      "id": "demo-183",
+      "name": "Numb",
+      "artist": "Men I Trust",
+      "genre": "indie",
+      "position": [
+        -14.36,
+        -7.04,
+        25.06
+      ],
+      "size": 1.23,
+      "brightness": 0.99
+    },
+    {
+      "id": "demo-184",
+      "name": "Show Me How",
+      "artist": "Men I Trust",
+      "genre": "indie",
+      "position": [
+        -22.62,
+        -9.88,
+        16.2
+      ],
+      "size": 1.03,
+      "brightness": 0.76
+    },
+    {
+      "id": "demo-185",
+      "name": "Myth",
+      "artist": "Beach House",
+      "genre": "indie",
+      "position": [
+        -20.22,
+        -4.86,
+        34.8
+      ],
+      "size": 0.43,
+      "brightness": 0.92
+    },
+    {
+      "id": "demo-186",
+      "name": "Space Song",
+      "artist": "Beach House",
+      "genre": "indie",
+      "position": [
+        -19.11,
+        4.3,
+        25.64
+      ],
+      "size": 0.42,
+      "brightness": 0.55
+    },
+    {
+      "id": "demo-187",
+      "name": "Silver Soul",
+      "artist": "Beach House",
+      "genre": "indie",
+      "position": [
+        -23.78,
+        -2.16,
+        27.98
+      ],
+      "size": 1.8,
+      "brightness": 0.59
+    },
+    {
+      "id": "demo-188",
+      "name": "Feels Like We Only Go Backwards",
+      "artist": "Tame Impala",
+      "genre": "indie",
+      "position": [
+        -12.45,
+        -8.01,
+        27.4
+      ],
+      "size": 1.97,
+      "brightness": 0.94
+    },
+    {
+      "id": "demo-189",
+      "name": "Do You Realize??",
+      "artist": "The Flaming Lips",
+      "genre": "indie",
+      "position": [
+        -22.89,
+        -3.41,
+        18.24
+      ],
+      "size": 0.43,
+      "brightness": 0.64
+    },
+    {
+      "id": "demo-190",
+      "name": "Sweater Weather",
+      "artist": "The Neighbourhood",
+      "genre": "indie",
+      "position": [
+        -21.99,
+        -13.26,
+        21.68
+      ],
+      "size": 1.45,
+      "brightness": 0.53
+    },
+    {
+      "id": "demo-191",
+      "name": "Apocalypse",
+      "artist": "Cigarettes After Sex",
+      "genre": "indie",
+      "position": [
+        -19.76,
+        -0.24,
+        29.24
+      ],
+      "size": 0.96,
+      "brightness": 0.95
+    },
+    {
+      "id": "demo-192",
+      "name": "K.",
+      "artist": "Cigarettes After Sex",
+      "genre": "indie",
+      "position": [
+        -22.37,
+        -5.04,
+        22.06
+      ],
+      "size": 0.94,
+      "brightness": 0.6
+    },
+    {
+      "id": "demo-193",
+      "name": "Dissolve",
+      "artist": "Absofacto",
+      "genre": "indie",
+      "position": [
+        -17.59,
+        -3.55,
+        16.62
+      ],
+      "size": 1.71,
+      "brightness": 0.94
+    },
+    {
+      "id": "demo-194",
+      "name": "Heat Above",
+      "artist": "Greta Van Fleet",
+      "genre": "indie",
+      "position": [
+        -17.55,
+        -2.22,
+        25.01
+      ],
+      "size": 1.28,
+      "brightness": 0.66
+    },
+    {
+      "id": "demo-195",
+      "name": "Take a Slice",
+      "artist": "Glass Animals",
+      "genre": "indie",
+      "position": [
+        -18.18,
+        12.06,
+        22.99
+      ],
+      "size": 1.39,
+      "brightness": 0.63
+    },
+    {
+      "id": "demo-196",
+      "name": "Youth",
+      "artist": "Glass Animals",
+      "genre": "indie",
+      "position": [
+        -12.03,
+        -4.46,
+        31.41
+      ],
+      "size": 1.75,
+      "brightness": 0.94
+    },
+    {
+      "id": "demo-197",
+      "name": "Agnes",
+      "artist": "Glass Animals",
+      "genre": "indie",
+      "position": [
+        -12.46,
+        -4.11,
+        21.48
+      ],
+      "size": 1.62,
+      "brightness": 0.88
+    },
+    {
+      "id": "demo-198",
+      "name": "Warm Glow",
+      "artist": "Hippo Campus",
+      "genre": "indie",
+      "position": [
+        -16.95,
+        -0.45,
+        29.07
+      ],
+      "size": 1.25,
+      "brightness": 0.82
+    },
+    {
+      "id": "demo-199",
+      "name": "Buttercup",
+      "artist": "Hippo Campus",
+      "genre": "indie",
+      "position": [
+        -19.88,
+        2.13,
+        27.48
+      ],
+      "size": 0.87,
+      "brightness": 1
+    },
+    {
+      "id": "demo-200",
+      "name": "Riptide",
+      "artist": "Vance Joy",
+      "genre": "indie",
+      "position": [
+        -22.44,
+        -0.66,
+        27.81
+      ],
+      "size": 0.71,
+      "brightness": 0.94
+    }
+  ]
+}
