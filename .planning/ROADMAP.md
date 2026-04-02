@@ -29,7 +29,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. User can close and reopen the browser tab and remain logged in
   3. Unauthenticated visitor sees a demo galaxy rendered on screen without needing to log in
   4. Logged-in user can log out and return to the demo/landing state
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md -- Scaffold Next.js 16 project with Auth.js v5 Spotify OAuth and session persistence
+- [ ] 01-02-PLAN.md -- Create demo galaxy 3D scene with ~200 stars, auto-orbit camera, and background starfield
+- [ ] 01-03-PLAN.md -- Wire auth UI components (demo banner, profile menu, error page, warp transitions)
+
 **UI hint**: yes
 
 ### Phase 2: Data Pipeline
@@ -87,7 +93,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Auth & Demo Mode | 0/TBD | Not started | - |
+| 1. Auth & Demo Mode | 0/3 | Planning complete | - |
 | 2. Data Pipeline | 0/TBD | Not started | - |
 | 3. Galaxy Renderer | 0/TBD | Not started | - |
 | 4. Navigation & Interaction | 0/TBD | Not started | - |
