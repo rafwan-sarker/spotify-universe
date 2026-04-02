@@ -9,8 +9,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Authentication & Data
 
-- [ ] **AUTH-01**: User can log in with Spotify OAuth (server-side via Vercel functions)
-- [ ] **AUTH-02**: User session persists across browser refresh
+- [x] **AUTH-01**: User can log in with Spotify OAuth (server-side via Vercel functions)
+- [x] **AUTH-02**: User session persists across browser refresh
 - [ ] **AUTH-03**: Demo mode with pre-loaded sample galaxy for unauthenticated visitors
 - [ ] **DATA-01**: Progressively fetch user's full Spotify library (saved songs + top tracks)
 - [ ] **DATA-02**: Normalize 5000+ Spotify micro-genres into 15-25 macro-genre clusters
@@ -82,8 +82,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Phase 1 | Pending |
-| AUTH-02 | Phase 1 | Pending |
+| AUTH-01 | Phase 1 | Complete |
+| AUTH-02 | Phase 1 | Complete |
 | AUTH-03 | Phase 1 | Pending |
 | DATA-01 | Phase 2 | Pending |
 | DATA-02 | Phase 2 | Pending |

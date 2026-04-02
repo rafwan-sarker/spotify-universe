@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 1 context gathered
-last_updated: "2026-04-02T20:53:09.877Z"
-last_activity: 2026-04-02 -- Phase 01 execution started
+stopped_at: Completed 01-01-PLAN.md
+last_updated: "2026-04-02T21:02:03.851Z"
+last_activity: 2026-04-02
 progress:
   total_phases: 5
   completed_phases: 0
   total_plans: 3
-  completed_plans: 0
+  completed_plans: 1
   percent: 0
 ---
 
@@ -26,9 +26,9 @@ See: .planning/PROJECT.md (updated 2026-04-01)
 ## Current Position
 
 Phase: 01 (auth-demo-mode) — EXECUTING
-Plan: 1 of 3
-Status: Executing Phase 01
-Last activity: 2026-04-02 -- Phase 01 execution started
+Plan: 2 of 3
+Status: Ready to execute
+Last activity: 2026-04-02
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -52,6 +52,7 @@ Progress: [░░░░░░░░░░] 0%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01-auth-demo-mode P01 | 4min | 2 tasks | 19 files |
 
 ## Accumulated Context
 
@@ -63,6 +64,8 @@ Recent decisions affecting current work:
 - [Roadmap]: Genre-based star coloring (not energy-based) due to Audio Features API being blocked for new apps
 - [Roadmap]: Top-track ranking for star size (not play count) since popularity field removed Feb 2026
 - [Roadmap]: Demo mode in Phase 1 (not deferred) because 5-user dev cap makes it a launch requirement
+- [Phase 01-auth-demo-mode]: All 4 Spotify scopes requested upfront in Phase 1 to prevent re-authorization
+- [Phase 01-auth-demo-mode]: 5-minute buffer on token expiry guards against jwt callback multi-invocation race condition
 
 ### Pending Todos
 
@@ -76,6 +79,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T20:12:58.489Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-auth-demo-mode/01-CONTEXT.md
+Last session: 2026-04-02T21:02:03.849Z
+Stopped at: Completed 01-01-PLAN.md
+Resume file: None
