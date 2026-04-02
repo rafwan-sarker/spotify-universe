@@ -2,17 +2,22 @@ import NextAuth from "next-auth"
 import Spotify from "next-auth/providers/spotify"
 import { SPOTIFY_SCOPES } from "@/lib/spotify-scopes"
 
-export const { handlers, auth, signIn, signOut } = NextAuth({
-  providers: [
+const providers = []
+if (process.env.SPOTIFY_CLIENT_ID && process.env.SPOTIFY_CLIENT_SECRET) {
+  providers.push(
     Spotify({
-      clientId: process.env.SPOTIFY_CLIENT_ID!,
-      clientSecret: process.env.SPOTIFY_CLIENT_SECRET!,
+      clientId: process.env.SPOTIFY_CLIENT_ID,
+      clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
       authorization: {
         url: "https://accounts.spotify.com/authorize",
         params: { scope: SPOTIFY_SCOPES },
       },
-    }),
-  ],
+    })
+  )
+}
+
+export const { handlers, auth, signIn, signOut } = NextAuth({
+  providers,
   session: { strategy: "jwt" },
   pages: {
     error: "/auth/error",
