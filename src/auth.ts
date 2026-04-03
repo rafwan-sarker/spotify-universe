@@ -4,8 +4,7 @@ import { SPOTIFY_SCOPES } from "@/lib/spotify-scopes"
 
 const providers = []
 if (process.env.SPOTIFY_CLIENT_ID && process.env.SPOTIFY_CLIENT_SECRET) {
-  providers.push(
-    Spotify({
+  const spotifyProvider = Spotify({
       clientId: process.env.SPOTIFY_CLIENT_ID,
       clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
       authorization: {
@@ -13,10 +12,13 @@ if (process.env.SPOTIFY_CLIENT_ID && process.env.SPOTIFY_CLIENT_SECRET) {
         params: { scope: SPOTIFY_SCOPES },
       },
     })
-  )
+  // Disable PKCE — use state-only check to avoid cookie issues with localhost vs 127.0.0.1
+  spotifyProvider.checks = ["state"]
+  providers.push(spotifyProvider)
 }
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+  trustHost: true,
   providers,
   session: { strategy: "jwt" },
   pages: {
