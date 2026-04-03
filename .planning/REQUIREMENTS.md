@@ -33,12 +33,17 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Visual Style
 
-- [ ] **VIS-01**: Neon synthwave aesthetic (glowing outlines, neon palette, retro-futuristic feel)
+- [ ] **VIS-01**: Neon synthwave aesthetic with bloom/glow post-processing on all stars
 - [ ] **VIS-02**: Warp streak particle effects during hyperspace jumps
+- [ ] **VIS-05**: Top 5 most-listened stars glow as bright beacons (unmissable in the galaxy)
+- [ ] **VIS-06**: Genre labels floating in 3D space near each cluster
 
-### UI
+### UI & Personalization
 
 - [ ] **UI-01**: Mini-map HUD showing current position in the galaxy
+- [ ] **UI-05**: Galaxy stats card ("Your galaxy: X stars, Y genres, Z% dominant genre")
+- [ ] **UI-06**: Galaxy personality label based on genre distribution (e.g. "Eclectic Explorer", "Genre Loyalist")
+- [ ] **UI-07**: Artist constellation lines connecting stars by the same artist on star selection
 
 ## v2 Requirements
 
@@ -50,13 +55,10 @@ Deferred to future release. Tracked but not in current roadmap.
 
 ### Visual Polish
 
-- **VIS-03**: Bloom/glow post-processing for screenshot-worthy visuals
 - **VIS-04**: Procedural nebula clouds behind genre clusters
 
 ### UI Enhancements
 
-- **UI-02**: Genre labels floating on nebulae clusters
-- **UI-03**: Song info card on hover (name, artist, album art)
 - **UI-04**: Screenshot export for social sharing (viral growth mechanic)
 
 ### Social

@@ -90,15 +90,19 @@ Plans:
 
 **UI hint**: yes
 
-### Phase 5: Visual Polish & HUD
-**Goal**: The galaxy looks stunning with neon synthwave post-processing, genre nebulae have atmosphere, and a mini-map helps users stay oriented
+### Phase 5: Visual Polish, HUD & Personalization
+**Goal**: The galaxy looks stunning with bloom/glow, feels personal with stats and personality labels, and helps users stay oriented with a mini-map and genre labels
 **Depends on**: Phase 4
-**Requirements**: VIS-01, VIS-02, UI-01
+**Requirements**: VIS-01, VIS-02, VIS-05, VIS-06, UI-01, UI-05, UI-06, UI-07
 **Success Criteria** (what must be TRUE):
-  1. The galaxy has a cohesive neon synthwave aesthetic with bloom/glow effects on stars
-  2. Warp transitions include visible streak particle effects that intensify the sense of speed
-  3. A mini-map HUD shows the user's current position relative to the full galaxy
-  4. The app maintains 60fps on modern desktop browsers with all visual effects enabled
+  1. The galaxy has bloom/glow post-processing that makes stars radiate light and dense clusters glow like nebulae
+  2. Top 5 most-listened stars are visibly brighter beacons that stand out in the galaxy
+  3. Genre labels float in 3D space near each cluster ("Rock", "Pop", "Electronic")
+  4. A galaxy stats card shows personalized data ("Your galaxy: X stars, Y genres, Z% hip-hop")
+  5. A galaxy personality label appears based on genre distribution ("Eclectic Explorer", "Genre Loyalist")
+  6. Clicking a star shows artist constellation lines connecting all stars by that artist
+  7. A mini-map HUD shows the user's current position relative to the full galaxy
+  8. The app maintains 60fps on modern desktop browsers with all visual effects enabled
 **Plans**: TBD
 **UI hint**: yes
 
