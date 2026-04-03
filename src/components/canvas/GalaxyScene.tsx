@@ -6,7 +6,8 @@ import { useAppStore } from "@/lib/store"
 import { DemoGalaxy } from "./DemoGalaxy"
 import { RealGalaxy } from "./RealGalaxy"
 import { BackgroundStars } from "./BackgroundStars"
-import { AutoOrbitCamera } from "./AutoOrbitCamera"
+import { FlightController } from "./FlightController"
+import { WarpStreaks } from "./WarpStreaks"
 
 interface GalaxySceneProps {
   isAuthenticated: boolean
@@ -83,7 +84,8 @@ export default function GalaxyScene({ isAuthenticated }: GalaxySceneProps) {
       style={{ background: "#000005" }}
     >
       <ModeSync isAuthenticated={isAuthenticated} />
-      <AutoOrbitCamera />
+      <FlightController />
+      <WarpStreaks />
       <BackgroundStars />
       <ambientLight intensity={0.5} />
       {/* RealGalaxy always mounted -- self-manages visibility via mesh.count */}
