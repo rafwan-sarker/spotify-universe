@@ -18,11 +18,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Galaxy Rendering
 
-- [ ] **GLXY-01**: Render every song as an instanced star particle (5000+ at 60fps)
+- [x] **GLXY-01**: Render every song as an instanced star particle (5000+ at 60fps)
 - [ ] **GLXY-02**: Stars grouped into distinct genre nebulae/clusters in 3D space
-- [ ] **GLXY-03**: Star color determined by genre (rock=red, electronic=cyan, hip-hop=purple, etc.)
-- [ ] **GLXY-04**: Progressive galaxy build — stars appear in waves as data streams in
-- [ ] **GLXY-05**: Star size based on top-track ranking (most-listened songs are the biggest stars)
+- [x] **GLXY-03**: Star color determined by genre (rock=red, electronic=cyan, hip-hop=purple, etc.)
+- [x] **GLXY-04**: Progressive galaxy build — stars appear in waves as data streams in
+- [x] **GLXY-05**: Star size based on top-track ranking (most-listened songs are the biggest stars)
 
 ### Navigation
 
@@ -88,11 +88,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DATA-01 | Phase 2 | Complete |
 | DATA-02 | Phase 2 | Complete |
 | DATA-03 | Phase 2 | Complete |
-| GLXY-01 | Phase 3 | Pending |
+| GLXY-01 | Phase 3 | Complete |
 | GLXY-02 | Phase 3 | Pending |
-| GLXY-03 | Phase 3 | Pending |
-| GLXY-04 | Phase 3 | Pending |
-| GLXY-05 | Phase 3 | Pending |
+| GLXY-03 | Phase 3 | Complete |
+| GLXY-04 | Phase 3 | Complete |
+| GLXY-05 | Phase 3 | Complete |
 | NAV-01 | Phase 4 | Pending |
 | NAV-02 | Phase 4 | Pending |
 | NAV-03 | Phase 4 | Pending |

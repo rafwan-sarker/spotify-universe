@@ -67,7 +67,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md -- Star shaders and galaxy buffer utilities with tests
+- [x] 03-01-PLAN.md -- Star shaders and galaxy buffer utilities with tests
 - [ ] 03-02-PLAN.md -- RealGalaxy renderer component and GalaxyScene wiring with visual verification
 
 **UI hint**: yes
