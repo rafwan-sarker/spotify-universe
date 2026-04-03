@@ -26,10 +26,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Navigation
 
-- [ ] **NAV-01**: Smooth cruise flight controls (mouse/keyboard) for free-form exploration
-- [ ] **NAV-02**: Hyperspace warp jump transition (star-streak effect) when navigating
-- [ ] **NAV-03**: Click a star to warp to that artist's full constellation
-- [ ] **NAV-04**: Search bar to find any song/artist and warp directly to it
+- [x] **NAV-01**: Smooth cruise flight controls (mouse/keyboard) for free-form exploration
+- [x] **NAV-02**: Hyperspace warp jump transition (star-streak effect) when navigating
+- [x] **NAV-03**: Click a star to warp to that artist's full constellation
+- [x] **NAV-04**: Search bar to find any song/artist and warp directly to it
 
 ### Visual Style
 
@@ -93,10 +93,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | GLXY-03 | Phase 3 | Complete |
 | GLXY-04 | Phase 3 | Complete |
 | GLXY-05 | Phase 3 | Complete |
-| NAV-01 | Phase 4 | Pending |
-| NAV-02 | Phase 4 | Pending |
-| NAV-03 | Phase 4 | Pending |
-| NAV-04 | Phase 4 | Pending |
+| NAV-01 | Phase 4 | Complete |
+| NAV-02 | Phase 4 | Complete |
+| NAV-03 | Phase 4 | Complete |
+| NAV-04 | Phase 4 | Complete |
 | VIS-01 | Phase 5 | Pending |
 | VIS-02 | Phase 5 | Pending |
 | UI-01 | Phase 5 | Pending |
