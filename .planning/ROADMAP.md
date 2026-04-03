@@ -64,7 +64,12 @@ Plans:
   3. Star color reflects the song's genre cluster (different genres have different colors)
   4. Most-listened songs appear noticeably larger than deep cuts
   5. Stars animate into existence in waves as data arrives, creating a progressive galaxy formation effect
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 03-01-PLAN.md -- Star shaders and galaxy buffer utilities with tests
+- [ ] 03-02-PLAN.md -- RealGalaxy renderer component and GalaxyScene wiring with visual verification
+
 **UI hint**: yes
 
 ### Phase 4: Navigation & Interaction
@@ -100,6 +105,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 |-------|----------------|--------|-----------|
 | 1. Auth & Demo Mode | 3/3 | Complete | - |
 | 2. Data Pipeline | 0/3 | Planning complete | - |
-| 3. Galaxy Renderer | 0/TBD | Not started | - |
+| 3. Galaxy Renderer | 0/2 | Planning complete | - |
 | 4. Navigation & Interaction | 0/TBD | Not started | - |
 | 5. Visual Polish & HUD | 0/TBD | Not started | - |
