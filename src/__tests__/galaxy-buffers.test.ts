@@ -98,11 +98,11 @@ describe("galaxy-buffers", () => {
 
       updateStarBuffers(buffers, stars, 0, 10.0)
 
-      expect(buffers.sizes[0]).toBe(0.5)
-      expect(buffers.sizes[1]).toBe(1.2)
-      expect(buffers.sizes[2]).toBe(2.0)
-      expect(buffers.sizes[3]).toBe(0.3)
-      expect(buffers.sizes[4]).toBe(1.8)
+      expect(buffers.sizes[0]).toBeCloseTo(0.5, 5)
+      expect(buffers.sizes[1]).toBeCloseTo(1.2, 5)
+      expect(buffers.sizes[2]).toBeCloseTo(2.0, 5)
+      expect(buffers.sizes[3]).toBeCloseTo(0.3, 5)
+      expect(buffers.sizes[4]).toBeCloseTo(1.8, 5)
     })
 
     it("marks stars with brightness > 0.6 as isTopTrack=1.0, others as 0.0", () => {
@@ -184,14 +184,14 @@ describe("galaxy-buffers", () => {
       expect(buffers.colors[3 * 3 + 0]).toBeCloseTo(er, 5)
       expect(buffers.colors[3 * 3 + 1]).toBeCloseTo(eg, 5)
       expect(buffers.colors[3 * 3 + 2]).toBeCloseTo(eb, 5)
-      expect(buffers.sizes[3]).toBe(1.5)
+      expect(buffers.sizes[3]).toBeCloseTo(1.5, 5)
 
       // Index 4 should have indie color
       const [ir, ig, ib] = GENRE_COLORS["indie"]
       expect(buffers.colors[4 * 3 + 0]).toBeCloseTo(ir, 5)
       expect(buffers.colors[4 * 3 + 1]).toBeCloseTo(ig, 5)
       expect(buffers.colors[4 * 3 + 2]).toBeCloseTo(ib, 5)
-      expect(buffers.sizes[4]).toBe(1.9)
+      expect(buffers.sizes[4]).toBeCloseTo(1.9, 5)
     })
 
     it("falls back to mystery color for unknown genres", () => {
@@ -261,9 +261,9 @@ describe("galaxy-buffers", () => {
 
       updateStarBuffers(buffers, stars, 0, 10.0)
 
-      expect(buffers.brightnesses[0]).toBe(0.1)
-      expect(buffers.brightnesses[1]).toBe(0.5)
-      expect(buffers.brightnesses[2]).toBe(0.9)
+      expect(buffers.brightnesses[0]).toBeCloseTo(0.1, 5)
+      expect(buffers.brightnesses[1]).toBeCloseTo(0.5, 5)
+      expect(buffers.brightnesses[2]).toBeCloseTo(0.9, 5)
     })
   })
 })
