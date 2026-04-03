@@ -85,7 +85,7 @@ Plans:
 
 Plans:
 - [x] 04-01-PLAN.md -- Navigation core: type contracts, store extension, flight math, star picking, warp visuals (TDD)
-- [ ] 04-02-PLAN.md -- FlightController camera state machine and WarpStreaks 3D particle system
+- [x] 04-02-PLAN.md -- FlightController camera state machine and WarpStreaks 3D particle system
 - [ ] 04-03-PLAN.md -- Star info card, search bar with fuse.js, click handler, and GalaxyScene wiring
 
 **UI hint**: yes
