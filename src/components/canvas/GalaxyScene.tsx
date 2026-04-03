@@ -1,9 +1,10 @@
 "use client"
 
 import { Canvas } from "@react-three/fiber"
-import { useEffect } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useAppStore } from "@/lib/store"
 import { DemoGalaxy } from "./DemoGalaxy"
+import { RealGalaxy } from "./RealGalaxy"
 import { BackgroundStars } from "./BackgroundStars"
 import { AutoOrbitCamera } from "./AutoOrbitCamera"
 
@@ -29,9 +30,52 @@ function ModeSync({ isAuthenticated }: { isAuthenticated: boolean }) {
   return null
 }
 
-export default function GalaxyScene({ isAuthenticated }: GalaxySceneProps) {
-  const mode = useAppStore((s) => s.mode)
+/**
+ * Manages the demo-to-real galaxy transition.
+ *
+ * When real stars begin appearing in the store, the demo galaxy remains
+ * visible for a ~1 second overlap period. During this time both galaxies
+ * coexist (additive blending makes them layer naturally). After the overlap
+ * the demo galaxy is hidden.
+ *
+ * Uses imperative store subscription to avoid re-renders during the transition.
+ */
+function DemoGalaxyFader() {
+  const [demoVisible, setDemoVisible] = useState(true)
+  const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
+  useEffect(() => {
+    const unsub = useAppStore.subscribe((state) => {
+      const hasRealStars = state.stars.length > 0
+      const isAuthenticated = state.mode === "authenticated"
+
+      if (hasRealStars && isAuthenticated && demoVisible) {
+        // Real stars are arriving -- begin transition.
+        // Keep demo visible for 1 second overlap, then hide.
+        if (!hideTimerRef.current) {
+          hideTimerRef.current = setTimeout(() => {
+            setDemoVisible(false)
+          }, 1000)
+        }
+      }
+    })
+
+    return () => {
+      unsub()
+      if (hideTimerRef.current) {
+        clearTimeout(hideTimerRef.current)
+      }
+    }
+    // demoVisible is intentionally excluded -- we only want to start the
+    // timer once, not re-subscribe when it changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  if (!demoVisible) return null
+  return <DemoGalaxy />
+}
+
+export default function GalaxyScene({ isAuthenticated }: GalaxySceneProps) {
   return (
     <Canvas
       camera={{ position: [0, 50, 100], fov: 60 }}
@@ -42,8 +86,10 @@ export default function GalaxyScene({ isAuthenticated }: GalaxySceneProps) {
       <AutoOrbitCamera />
       <BackgroundStars />
       <ambientLight intensity={0.5} />
-      {/* In Phase 1, demo galaxy always shows. Phase 2+ will swap based on mode */}
-      {(mode === "demo" || !isAuthenticated) && <DemoGalaxy />}
+      {/* RealGalaxy always mounted -- self-manages visibility via mesh.count */}
+      <RealGalaxy />
+      {/* DemoGalaxy shown initially, fades out when real stars appear */}
+      {!isAuthenticated ? <DemoGalaxy /> : <DemoGalaxyFader />}
     </Canvas>
   )
 }
