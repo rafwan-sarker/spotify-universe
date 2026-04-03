@@ -8,6 +8,8 @@ import { RealGalaxy } from "./RealGalaxy"
 import { BackgroundStars } from "./BackgroundStars"
 import { FlightController } from "./FlightController"
 import { WarpStreaks } from "./WarpStreaks"
+import { StarClickHandler } from "./StarClickHandler"
+import { StarInfoCard } from "./StarInfoCard"
 
 interface GalaxySceneProps {
   isAuthenticated: boolean
@@ -86,12 +88,14 @@ export default function GalaxyScene({ isAuthenticated }: GalaxySceneProps) {
       <ModeSync isAuthenticated={isAuthenticated} />
       <FlightController />
       <WarpStreaks />
+      <StarClickHandler />
       <BackgroundStars />
       <ambientLight intensity={0.5} />
       {/* RealGalaxy always mounted -- self-manages visibility via mesh.count */}
       <RealGalaxy />
       {/* DemoGalaxy shown initially, fades out when real stars appear */}
       {!isAuthenticated ? <DemoGalaxy /> : <DemoGalaxyFader />}
+      <StarInfoCard />
     </Canvas>
   )
 }

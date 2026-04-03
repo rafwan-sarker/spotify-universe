@@ -4,6 +4,8 @@ import { DemoBanner } from "@/components/ui/DemoBanner"
 import { ProfileMenu } from "@/components/ui/ProfileMenu"
 import { WarpTransition } from "@/components/ui/WarpTransition"
 import { SessionExpiredBanner } from "@/components/ui/SessionExpiredBanner"
+import { SearchBar } from "@/components/ui/SearchBar"
+import { ControlsHint } from "@/components/ui/ControlsHint"
 
 export default async function HomePage() {
   const session = await auth()
@@ -17,6 +19,8 @@ export default async function HomePage() {
       {session?.user && <ProfileMenu user={session.user} />}
       <WarpTransition />
       <SessionExpiredBanner />
+      <SearchBar />
+      <ControlsHint />
     </main>
   )
 }
