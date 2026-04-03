@@ -310,6 +310,7 @@ export class SpotifyFetchOrchestrator {
       topRanking,
       addedAt,
       source,
+      albumArt: raw.album?.images?.[1]?.url ?? raw.album?.images?.[0]?.url,
     }
 
     // Queue artist ID for genre fetching

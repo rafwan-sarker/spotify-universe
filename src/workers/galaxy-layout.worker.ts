@@ -86,6 +86,7 @@ function processBatch(input: WorkerInput): WorkerOutput {
         position,
         size,
         brightness,
+        albumArt: track.albumArt,
       })
     }
   }
