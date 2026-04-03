@@ -52,6 +52,8 @@ export function ControlsHint() {
           >
             WASD to fly
             <span className="mx-2" style={{ color: "rgba(255, 255, 255, 0.2)" }}>|</span>
+            Space/Shift for up/down
+            <span className="mx-2" style={{ color: "rgba(255, 255, 255, 0.2)" }}>|</span>
             Right-drag to look
             <span className="mx-2" style={{ color: "rgba(255, 255, 255, 0.2)" }}>|</span>
             Scroll to boost

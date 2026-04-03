@@ -46,25 +46,29 @@ export function applyVelocityDamping(
 export function computeCruiseVelocity(
   keysPressed: Set<string>,
   speed: number
-): { forward: number; strafe: number } {
+): { forward: number; strafe: number; vertical: number } {
   let forward = 0
   let strafe = 0
+  let vertical = 0
 
   if (keysPressed.has("w") || keysPressed.has("arrowup")) forward += 1
   if (keysPressed.has("s") || keysPressed.has("arrowdown")) forward -= 1
   if (keysPressed.has("a") || keysPressed.has("arrowleft")) strafe -= 1
   if (keysPressed.has("d") || keysPressed.has("arrowright")) strafe += 1
+  if (keysPressed.has(" ")) vertical += 1
+  if (keysPressed.has("shift")) vertical -= 1
 
   // No movement
-  if (forward === 0 && strafe === 0) {
-    return { forward: 0, strafe: 0 }
+  if (forward === 0 && strafe === 0 && vertical === 0) {
+    return { forward: 0, strafe: 0, vertical: 0 }
   }
 
   // Normalize diagonal movement so it doesn't exceed speed
-  const magnitude = Math.sqrt(forward * forward + strafe * strafe)
+  const magnitude = Math.sqrt(forward * forward + strafe * strafe + vertical * vertical)
   return {
     forward: (forward / magnitude) * speed,
     strafe: (strafe / magnitude) * speed,
+    vertical: (vertical / magnitude) * speed,
   }
 }
 

@@ -86,10 +86,21 @@ describe("flight-math", () => {
       expect(right.strafe).toBeGreaterThan(0)
     })
 
+    it("with Space/Shift returns vertical movement", () => {
+      const up = computeCruiseVelocity(new Set([" "]), 30)
+      expect(up.vertical).toBeGreaterThan(0)
+      expect(up.forward).toBe(0)
+
+      const down = computeCruiseVelocity(new Set(["shift"]), 30)
+      expect(down.vertical).toBeLessThan(0)
+      expect(down.forward).toBe(0)
+    })
+
     it("with no keys returns zero vector", () => {
       const result = computeCruiseVelocity(new Set(), 30)
       expect(result.forward).toBe(0)
       expect(result.strafe).toBe(0)
+      expect(result.vertical).toBe(0)
     })
 
     it("normalizes diagonal movement", () => {

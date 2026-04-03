@@ -3,6 +3,8 @@
 import { Canvas } from "@react-three/fiber"
 import { useEffect, useRef, useState } from "react"
 import { useAppStore } from "@/lib/store"
+import demoData from "@/data/demo-galaxy.json"
+import type { StarData } from "@/lib/spotify/types"
 import { DemoGalaxy } from "./DemoGalaxy"
 import { RealGalaxy } from "./RealGalaxy"
 import { BackgroundStars } from "./BackgroundStars"
@@ -17,7 +19,7 @@ interface GalaxySceneProps {
 
 /**
  * Syncs the server-side auth state (prop) into the client Zustand store.
- * This runs inside the R3F Canvas context as a regular React component.
+ * Also loads demo stars into the store so star picking works in demo mode.
  */
 function ModeSync({ isAuthenticated }: { isAuthenticated: boolean }) {
   const setMode = useAppStore((s) => s.setMode)
@@ -29,6 +31,22 @@ function ModeSync({ isAuthenticated }: { isAuthenticated: boolean }) {
       setMode(isAuthenticated ? "authenticated" : "demo")
     }
   }, [isAuthenticated, setMode, mode])
+
+  // Load demo stars into store so star picking and search work in demo mode
+  useEffect(() => {
+    if (!isAuthenticated && useAppStore.getState().stars.length === 0) {
+      const demoStars: StarData[] = demoData.stars.map((s) => ({
+        id: s.id,
+        name: s.name,
+        artist: s.artist,
+        genre: s.genre,
+        position: s.position as [number, number, number],
+        size: s.size,
+        brightness: s.brightness,
+      }))
+      useAppStore.getState().addStarBatch(demoStars)
+    }
+  }, [isAuthenticated])
 
   return null
 }
@@ -91,10 +109,10 @@ export default function GalaxyScene({ isAuthenticated }: GalaxySceneProps) {
       <StarClickHandler />
       <BackgroundStars />
       <ambientLight intensity={0.5} />
-      {/* RealGalaxy always mounted -- self-manages visibility via mesh.count */}
+      {/* RealGalaxy renders both demo and real stars from the store */}
       <RealGalaxy />
-      {/* DemoGalaxy shown initially, fades out when real stars appear */}
-      {!isAuthenticated ? <DemoGalaxy /> : <DemoGalaxyFader />}
+      {/* DemoGalaxy only used during auth transition (fades out when real stars arrive) */}
+      {isAuthenticated && <DemoGalaxyFader />}
       <StarInfoCard />
     </Canvas>
   )

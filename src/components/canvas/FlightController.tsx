@@ -15,10 +15,11 @@ import { deriveWarpVisuals, WARP_DURATION } from "@/lib/warp-visuals"
 // ── Module-scope input state (zero re-renders) ──────────────────────
 
 const keysPressed = new Set<string>()
-let mouseRightDown = false
+let mouseDown = false
 const mouseDelta = { x: 0, y: 0 }
 let scrollDelta = 0
 let lastInputTime = 0
+let mouseDragDistance = 0
 
 // Movement keys that trigger cruising mode
 const MOVEMENT_KEYS = new Set([
@@ -30,7 +31,14 @@ const MOVEMENT_KEYS = new Set([
   "arrowdown",
   "arrowleft",
   "arrowright",
+  " ",
+  "shift",
 ])
+
+/** Returns true if the last mouse interaction was a drag (not a click) */
+export function wasMouseDrag(): boolean {
+  return mouseDragDistance > 5
+}
 
 // Keys that should NOT be captured (search shortcuts handled by DOM)
 function isSearchShortcut(e: KeyboardEvent): boolean {
@@ -64,6 +72,7 @@ export function FlightController() {
   const pitchRef = useRef(0)
   const speedMultiplierRef = useRef(1.0)
   const warpStartPosRef = useRef(new THREE.Vector3())
+  const warpStartCapturedRef = useRef(false)
   const idleAngleRef = useRef(0)
   const idleCenterRef = useRef(new THREE.Vector3())
   const idleRadiusRef = useRef(0)
@@ -88,21 +97,23 @@ export function FlightController() {
 
     function onMouseDown(e: MouseEvent) {
       if (e.button === 2) {
-        mouseRightDown = true
+        mouseDown = true
+        mouseDragDistance = 0
         lastInputTime = performance.now() / 1000
       }
     }
 
     function onMouseUp(e: MouseEvent) {
       if (e.button === 2) {
-        mouseRightDown = false
+        mouseDown = false
       }
     }
 
     function onMouseMove(e: MouseEvent) {
-      if (mouseRightDown) {
+      if (mouseDown) {
         mouseDelta.x += e.movementX
         mouseDelta.y += e.movementY
+        mouseDragDistance += Math.abs(e.movementX) + Math.abs(e.movementY)
         lastInputTime = performance.now() / 1000
       }
     }
@@ -136,7 +147,7 @@ export function FlightController() {
 
       // Reset module state on unmount
       keysPressed.clear()
-      mouseRightDown = false
+      mouseDown = false
       mouseDelta.x = 0
       mouseDelta.y = 0
       scrollDelta = 0
@@ -189,7 +200,7 @@ export function FlightController() {
 
       // Transition to cruising on any movement input
       const hasMovementKey = [...keysPressed].some((k) => MOVEMENT_KEYS.has(k))
-      if (hasMovementKey || mouseRightDown) {
+      if (hasMovementKey || mouseDown) {
         idleRadiusRef.current = 0 // Reset for next idle entry
         state.setCameraMode("cruising")
       }
@@ -236,12 +247,13 @@ export function FlightController() {
       _forward.set(0, 0, -1).applyQuaternion(camera.quaternion)
       _right.set(1, 0, 0).applyQuaternion(camera.quaternion)
 
-      const hasMovement = cruiseResult.forward !== 0 || cruiseResult.strafe !== 0
+      const hasMovement = cruiseResult.forward !== 0 || cruiseResult.strafe !== 0 || cruiseResult.vertical !== 0
       if (hasMovement) {
-        // Build velocity from forward/strafe
+        // Build velocity from forward/strafe/vertical
         velocityRef.current.set(0, 0, 0)
         velocityRef.current.addScaledVector(_forward, cruiseResult.forward)
         velocityRef.current.addScaledVector(_right, cruiseResult.strafe)
+        velocityRef.current.y += cruiseResult.vertical
       } else {
         // Apply damping when no keys pressed
         const damped = applyVelocityDamping(
@@ -275,8 +287,9 @@ export function FlightController() {
       }
 
       // First frame of warp: capture start position
-      if (state.warpProgress < 0.01) {
+      if (!warpStartCapturedRef.current) {
         warpStartPosRef.current.copy(camera.position)
+        warpStartCapturedRef.current = true
       }
 
       // Advance warp progress
@@ -322,6 +335,7 @@ export function FlightController() {
         pitchRef.current = _euler.x
 
         // Transition to inspecting
+        warpStartCapturedRef.current = false
         state.setCameraMode("inspecting")
 
         // Auto-select star if warpTarget has a starId

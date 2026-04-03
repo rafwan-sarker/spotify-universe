@@ -37,7 +37,7 @@ export function StarClickHandler() {
       const ndcX = ((e.clientX - rect.left) / rect.width) * 2 - 1
       const ndcY = -((e.clientY - rect.top) / rect.height) * 2 + 1
 
-      const star = findNearestStar(ndcX, ndcY, state.stars, projectFn)
+      const star = findNearestStar(ndcX, ndcY, state.stars, projectFn, 0.15)
 
       if (star) {
         // Step 1 of two-step navigation (per D-06): warp to individual star
