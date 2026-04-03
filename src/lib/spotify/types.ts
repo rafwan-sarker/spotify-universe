@@ -7,6 +7,7 @@ export interface StarData {
   position: [number, number, number] // 3D world-space position
   size: number // 0.3 to 2.0
   brightness: number // 0.0 to 1.0
+  albumArt?: string // Album cover URL (300x300 preferred, 640x640 fallback)
 }
 
 export interface GenreCluster {
@@ -46,6 +47,7 @@ export interface NormalizedTrack {
   topRanking: TopTrackRanking | null
   addedAt: string | null // ISO date from saved tracks
   source: "saved" | "top" | "playlist" | "recent"
+  albumArt?: string // Album cover URL from Spotify API
 }
 
 export interface TopTrackRanking {

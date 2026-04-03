@@ -3,6 +3,8 @@ import type { StarData, GenreCluster } from "@/lib/spotify/types"
 
 type AppMode = "demo" | "authenticated" | "transitioning"
 
+export type CameraMode = 'idle' | 'cruising' | 'warping' | 'inspecting'
+
 type FetchPhase =
   | "idle"
   | "tracks"
@@ -37,6 +39,20 @@ interface AppStore {
   setGenres: (genres: GenreCluster[]) => void
   setFetchProgress: (progress: Partial<FetchProgress>) => void
   resetGalaxy: () => void
+
+  // Navigation state
+  cameraMode: CameraMode
+  setCameraMode: (mode: CameraMode) => void
+  warpTarget: { position: [number, number, number]; starId?: string } | null
+  warpProgress: number
+  startWarp: (target: { position: [number, number, number]; starId?: string }) => void
+  clearWarp: () => void
+  selectedStar: StarData | null
+  setSelectedStar: (star: StarData | null) => void
+  searchOpen: boolean
+  searchQuery: string
+  setSearchOpen: (open: boolean) => void
+  setSearchQuery: (query: string) => void
 }
 
 const initialGalaxyState = {
@@ -68,4 +84,18 @@ export const useAppStore = create<AppStore>((set) => ({
     })),
 
   resetGalaxy: () => set(initialGalaxyState),
+
+  // Navigation state (initial values)
+  cameraMode: 'idle' as CameraMode,
+  setCameraMode: (cameraMode) => set({ cameraMode }),
+  warpTarget: null,
+  warpProgress: 0,
+  startWarp: (target) => set({ warpTarget: target, warpProgress: 0, cameraMode: 'warping' as CameraMode }),
+  clearWarp: () => set({ warpTarget: null, warpProgress: 0 }),
+  selectedStar: null,
+  setSelectedStar: (selectedStar) => set({ selectedStar }),
+  searchOpen: false,
+  searchQuery: '',
+  setSearchOpen: (searchOpen) => set({ searchOpen }),
+  setSearchQuery: (searchQuery) => set({ searchQuery }),
 }))
