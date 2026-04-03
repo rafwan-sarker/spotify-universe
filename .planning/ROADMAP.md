@@ -81,7 +81,13 @@ Plans:
   2. Clicking a star warps the camera to that artist's constellation and shows track info (name, artist, album art, Spotify link)
   3. Typing in the search bar finds matching songs or artists and warping to the result moves the camera there
   4. Hyperspace warp transitions play a star-streak visual effect during camera travel
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 04-01-PLAN.md -- Navigation core: type contracts, store extension, flight math, star picking, warp visuals (TDD)
+- [ ] 04-02-PLAN.md -- FlightController camera state machine and WarpStreaks 3D particle system
+- [ ] 04-03-PLAN.md -- Star info card, search bar with fuse.js, click handler, and GalaxyScene wiring
+
 **UI hint**: yes
 
 ### Phase 5: Visual Polish & HUD
@@ -106,5 +112,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Auth & Demo Mode | 3/3 | Complete | - |
 | 2. Data Pipeline | 0/3 | Planning complete | - |
 | 3. Galaxy Renderer | 0/2 | Planning complete | - |
-| 4. Navigation & Interaction | 0/TBD | Not started | - |
+| 4. Navigation & Interaction | 0/3 | Planning complete | - |
 | 5. Visual Polish & HUD | 0/TBD | Not started | - |
