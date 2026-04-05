@@ -105,23 +105,94 @@ describe("galaxy-buffers", () => {
       expect(buffers.sizes[4]).toBeCloseTo(1.8, 5)
     })
 
-    it("marks stars with brightness > 0.6 as isTopTrack=1.0, others as 0.0", () => {
+    it("sets isTopTracks to 2.0 for top-5 beacon stars (brightness >= 0.8)", () => {
       const buffers = createStarBuffers(100)
       const stars: StarData[] = [
-        makeStar({ id: "s1", brightness: 0.3 }),
-        makeStar({ id: "s2", brightness: 0.6 }),
-        makeStar({ id: "s3", brightness: 0.61 }),
-        makeStar({ id: "s4", brightness: 0.9 }),
-        makeStar({ id: "s5", brightness: 1.0 }),
+        makeStar({ id: "s1", brightness: 0.95 }),
+        makeStar({ id: "s2", brightness: 0.90 }),
+        makeStar({ id: "s3", brightness: 0.85 }),
+        makeStar({ id: "s4", brightness: 0.82 }),
+        makeStar({ id: "s5", brightness: 0.80 }),
+        makeStar({ id: "s6", brightness: 0.70 }), // top track but not beacon
+        makeStar({ id: "s7", brightness: 0.50 }), // normal
+      ]
+
+      updateStarBuffers(buffers, stars, 0, 10.0)
+
+      // Top-5 beacons (brightness >= 0.8, sorted by brightness desc, positions 0-4)
+      expect(buffers.isTopTracks[0]).toBe(2.0) // 0.95 -- beacon
+      expect(buffers.isTopTracks[1]).toBe(2.0) // 0.90 -- beacon
+      expect(buffers.isTopTracks[2]).toBe(2.0) // 0.85 -- beacon
+      expect(buffers.isTopTracks[3]).toBe(2.0) // 0.82 -- beacon
+      expect(buffers.isTopTracks[4]).toBe(2.0) // 0.80 -- beacon
+      // Top track but not beacon
+      expect(buffers.isTopTracks[5]).toBe(1.0) // 0.70 > 0.6
+      // Normal star
+      expect(buffers.isTopTracks[6]).toBe(0.0) // 0.50 <= 0.6
+    })
+
+    it("sets isTopTracks to 1.0 for top tracks not in top-5 beacons", () => {
+      const buffers = createStarBuffers(100)
+      const stars: StarData[] = [
+        makeStar({ id: "s1", brightness: 0.3 }),  // normal
+        makeStar({ id: "s2", brightness: 0.6 }),  // normal (not > 0.6)
+        makeStar({ id: "s3", brightness: 0.61 }), // top track
+        makeStar({ id: "s4", brightness: 0.75 }), // top track
+        makeStar({ id: "s5", brightness: 0.79 }), // top track (below 0.8 threshold)
       ]
 
       updateStarBuffers(buffers, stars, 0, 10.0)
 
       expect(buffers.isTopTracks[0]).toBe(0.0) // 0.3 <= 0.6
-      expect(buffers.isTopTracks[1]).toBe(0.0) // 0.6 <= 0.6 (not > 0.6)
-      expect(buffers.isTopTracks[2]).toBe(1.0) // 0.61 > 0.6
-      expect(buffers.isTopTracks[3]).toBe(1.0) // 0.9 > 0.6
-      expect(buffers.isTopTracks[4]).toBe(1.0) // 1.0 > 0.6
+      expect(buffers.isTopTracks[1]).toBe(0.0) // 0.6 <= 0.6
+      expect(buffers.isTopTracks[2]).toBe(1.0) // 0.61 > 0.6 but < 0.8
+      expect(buffers.isTopTracks[3]).toBe(1.0) // 0.75 > 0.6 but < 0.8
+      expect(buffers.isTopTracks[4]).toBe(1.0) // 0.79 > 0.6 but < 0.8
+    })
+
+    it("assigns fewer than 5 beacons when fewer than 5 stars have brightness >= 0.8", () => {
+      const buffers = createStarBuffers(100)
+      const stars: StarData[] = [
+        makeStar({ id: "s1", brightness: 0.95 }),
+        makeStar({ id: "s2", brightness: 0.82 }),
+        makeStar({ id: "s3", brightness: 0.70 }), // top track, not beacon
+        makeStar({ id: "s4", brightness: 0.50 }), // normal
+      ]
+
+      updateStarBuffers(buffers, stars, 0, 10.0)
+
+      // Only 2 stars have brightness >= 0.8
+      expect(buffers.isTopTracks[0]).toBe(2.0) // 0.95 -- beacon
+      expect(buffers.isTopTracks[1]).toBe(2.0) // 0.82 -- beacon
+      expect(buffers.isTopTracks[2]).toBe(1.0) // 0.70 > 0.6 -- top track
+      expect(buffers.isTopTracks[3]).toBe(0.0) // 0.50 <= 0.6 -- normal
+    })
+
+    it("caps beacons at 5 even when more than 5 stars have brightness >= 0.8", () => {
+      const buffers = createStarBuffers(100)
+      const stars: StarData[] = [
+        makeStar({ id: "s1", brightness: 0.99 }),
+        makeStar({ id: "s2", brightness: 0.95 }),
+        makeStar({ id: "s3", brightness: 0.92 }),
+        makeStar({ id: "s4", brightness: 0.88 }),
+        makeStar({ id: "s5", brightness: 0.85 }),
+        makeStar({ id: "s6", brightness: 0.82 }), // 6th brightest -- should be top track, not beacon
+        makeStar({ id: "s7", brightness: 0.80 }), // 7th -- also just top track
+        makeStar({ id: "s8", brightness: 0.65 }), // top track
+      ]
+
+      updateStarBuffers(buffers, stars, 0, 10.0)
+
+      // Top 5 by brightness get beacon status
+      expect(buffers.isTopTracks[0]).toBe(2.0) // 0.99 -- beacon #1
+      expect(buffers.isTopTracks[1]).toBe(2.0) // 0.95 -- beacon #2
+      expect(buffers.isTopTracks[2]).toBe(2.0) // 0.92 -- beacon #3
+      expect(buffers.isTopTracks[3]).toBe(2.0) // 0.88 -- beacon #4
+      expect(buffers.isTopTracks[4]).toBe(2.0) // 0.85 -- beacon #5
+      // 6th and 7th have brightness >= 0.8 but are NOT in top 5
+      expect(buffers.isTopTracks[5]).toBe(1.0) // 0.82 -- top track (> 0.6)
+      expect(buffers.isTopTracks[6]).toBe(1.0) // 0.80 -- top track (> 0.6)
+      expect(buffers.isTopTracks[7]).toBe(1.0) // 0.65 -- top track (> 0.6)
     })
 
     it("staggers birth times evenly across spreadDuration", () => {
