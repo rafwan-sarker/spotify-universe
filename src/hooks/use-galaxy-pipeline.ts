@@ -78,6 +78,7 @@ export function useGalaxyPipeline() {
       },
 
       onComplete: () => {
+        useAppStore.setState({ isComplete: true })
         useAppStore.getState().setFetchProgress({ phase: "complete" })
         setIsRunning(false)
       },

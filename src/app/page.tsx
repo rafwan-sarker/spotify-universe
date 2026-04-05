@@ -8,6 +8,7 @@ import { SearchBar } from "@/components/ui/SearchBar"
 import { ControlsHint } from "@/components/ui/ControlsHint"
 import { GalaxyStats } from "@/components/ui/GalaxyStats"
 import { MiniMap } from "@/components/ui/MiniMap"
+import { PipelineTrigger } from "@/components/ui/PipelineTrigger"
 
 export default async function HomePage() {
   const session = await auth()
@@ -25,6 +26,7 @@ export default async function HomePage() {
       <ControlsHint />
       <GalaxyStats />
       <MiniMap />
+      {!!session && <PipelineTrigger />}
     </main>
   )
 }
