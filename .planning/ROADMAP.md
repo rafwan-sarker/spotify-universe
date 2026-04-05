@@ -106,7 +106,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md -- Bloom post-processing, beacon star shaders, genre labels, and constellation lines (3D scene layer)
+- [x] 05-01-PLAN.md -- Bloom post-processing, beacon star shaders, genre labels, and constellation lines (3D scene layer)
 - [ ] 05-02-PLAN.md -- Galaxy stats card with personality label, mini-map HUD, and DOM overlay wiring
 
 **UI hint**: yes
