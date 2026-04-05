@@ -8,7 +8,14 @@ import { NextRequest, NextResponse } from "next/server"
  * exposes the raw JWT with accessToken.
  */
 export async function getSpotifyToken(request: NextRequest): Promise<string | null> {
-  const token = await getToken({ req: request, secret: process.env.AUTH_SECRET })
+  // Auth.js v5 on HTTPS uses __Secure-authjs.session-token cookie name
+  const token = await getToken({
+    req: request,
+    secret: process.env.AUTH_SECRET,
+    cookieName: request.cookies.has("__Secure-authjs.session-token")
+      ? "__Secure-authjs.session-token"
+      : "authjs.session-token",
+  })
   return (token?.accessToken as string) ?? null
 }
 
