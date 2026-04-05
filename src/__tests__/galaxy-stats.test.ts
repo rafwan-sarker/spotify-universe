@@ -89,27 +89,41 @@ describe("computePersonality", () => {
   })
 
   it("returns 'Mainstream Voyager' when >60% high-brightness stars", () => {
+    // 5 genres (under 6 = no Eclectic Explorer), no genre >50% (no Loyalist),
+    // but >60% of stars have high brightness
     const stars: StarData[] = [
-      ...Array.from({ length: 7 }, () =>
-        makeStar({ genre: "pop", brightness: 0.8 })
-      ),
-      ...Array.from({ length: 3 }, () =>
-        makeStar({ genre: "rock", brightness: 0.3 })
-      ),
+      makeStar({ genre: "pop", brightness: 0.8 }),
+      makeStar({ genre: "pop", brightness: 0.8 }),
+      makeStar({ genre: "pop", brightness: 0.8 }),
+      makeStar({ genre: "rock", brightness: 0.8 }),
+      makeStar({ genre: "rock", brightness: 0.8 }),
+      makeStar({ genre: "jazz", brightness: 0.8 }),
+      makeStar({ genre: "jazz", brightness: 0.8 }),
+      makeStar({ genre: "electronic", brightness: 0.3 }),
+      makeStar({ genre: "electronic", brightness: 0.3 }),
+      makeStar({ genre: "rnb", brightness: 0.3 }),
     ]
+    // pop=3/10=30%, 7/10=70% high brightness => Mainstream Voyager
 
     expect(computePersonality(stars)).toBe("Mainstream Voyager")
   })
 
   it("returns 'Deep Diver' when <30% high-brightness stars", () => {
+    // 5 genres (under 6 = no Eclectic Explorer), no genre >50% (no Loyalist),
+    // and <30% high brightness
     const stars: StarData[] = [
-      ...Array.from({ length: 2 }, () =>
-        makeStar({ genre: "pop", brightness: 0.8 })
-      ),
-      ...Array.from({ length: 8 }, () =>
-        makeStar({ genre: "rock", brightness: 0.3 })
-      ),
+      makeStar({ genre: "pop", brightness: 0.8 }),
+      makeStar({ genre: "pop", brightness: 0.3 }),
+      makeStar({ genre: "pop", brightness: 0.3 }),
+      makeStar({ genre: "rock", brightness: 0.3 }),
+      makeStar({ genre: "rock", brightness: 0.3 }),
+      makeStar({ genre: "jazz", brightness: 0.3 }),
+      makeStar({ genre: "jazz", brightness: 0.3 }),
+      makeStar({ genre: "electronic", brightness: 0.3 }),
+      makeStar({ genre: "electronic", brightness: 0.3 }),
+      makeStar({ genre: "rnb", brightness: 0.3 }),
     ]
+    // pop=3/10=30%, 1/10=10% high brightness => Deep Diver
 
     expect(computePersonality(stars)).toBe("Deep Diver")
   })

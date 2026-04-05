@@ -1,5 +1,6 @@
 import { create } from "zustand"
 import type { StarData, GenreCluster } from "@/lib/spotify/types"
+import type { GalaxyStats } from "@/lib/galaxy-stats"
 
 type AppMode = "demo" | "authenticated" | "transitioning"
 
@@ -53,6 +54,10 @@ interface AppStore {
   searchQuery: string
   setSearchOpen: (open: boolean) => void
   setSearchQuery: (query: string) => void
+
+  // Galaxy stats (computed after galaxy finishes building)
+  galaxyStats: GalaxyStats | null
+  setGalaxyStats: (stats: GalaxyStats) => void
 }
 
 const initialGalaxyState = {
@@ -98,4 +103,8 @@ export const useAppStore = create<AppStore>((set) => ({
   searchQuery: '',
   setSearchOpen: (searchOpen) => set({ searchOpen }),
   setSearchQuery: (searchQuery) => set({ searchQuery }),
+
+  // Galaxy stats
+  galaxyStats: null,
+  setGalaxyStats: (galaxyStats) => set({ galaxyStats }),
 }))
