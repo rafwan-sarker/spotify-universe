@@ -12,6 +12,9 @@ import { FlightController } from "./FlightController"
 import { WarpStreaks } from "./WarpStreaks"
 import { StarClickHandler } from "./StarClickHandler"
 import { StarInfoCard } from "./StarInfoCard"
+import { GenreLabels } from "./GenreLabels"
+import { ConstellationLines } from "./ConstellationLines"
+import { PostProcessing } from "./PostProcessing"
 
 interface GalaxySceneProps {
   isAuthenticated: boolean
@@ -114,6 +117,10 @@ export default function GalaxyScene({ isAuthenticated }: GalaxySceneProps) {
       {/* DemoGalaxy only used during auth transition (fades out when real stars arrive) */}
       {isAuthenticated && <DemoGalaxyFader />}
       <StarInfoCard />
+      <GenreLabels />
+      <ConstellationLines />
+      {/* PostProcessing MUST be last -- EffectComposer wraps entire scene render */}
+      <PostProcessing />
     </Canvas>
   )
 }
