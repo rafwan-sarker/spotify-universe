@@ -6,6 +6,8 @@ import { WarpTransition } from "@/components/ui/WarpTransition"
 import { SessionExpiredBanner } from "@/components/ui/SessionExpiredBanner"
 import { SearchBar } from "@/components/ui/SearchBar"
 import { ControlsHint } from "@/components/ui/ControlsHint"
+import { GalaxyStats } from "@/components/ui/GalaxyStats"
+import { MiniMap } from "@/components/ui/MiniMap"
 
 export default async function HomePage() {
   const session = await auth()
@@ -21,6 +23,8 @@ export default async function HomePage() {
       <SessionExpiredBanner />
       <SearchBar />
       <ControlsHint />
+      <GalaxyStats />
+      <MiniMap />
     </main>
   )
 }

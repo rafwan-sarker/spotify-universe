@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import { useFrame, useThree } from "@react-three/fiber"
 import * as THREE from "three"
 import { useAppStore } from "@/lib/store"
+import { sharedCameraRef } from "@/lib/camera-ref"
 import {
   applyVelocityDamping,
   computeCruiseVelocity,
@@ -64,7 +65,12 @@ const _offset = new THREE.Vector3(0, 2, 8)
  * Returns null -- purely imperative, no JSX output.
  */
 export function FlightController() {
-  const { gl } = useThree()
+  const { gl, camera } = useThree()
+
+  // Expose camera to non-R3F components (MiniMap)
+  useEffect(() => {
+    sharedCameraRef.current = camera
+  }, [camera])
 
   // Mutable per-frame refs (not React state)
   const velocityRef = useRef(new THREE.Vector3())
