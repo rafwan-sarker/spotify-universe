@@ -35,9 +35,10 @@ function ModeSync({ isAuthenticated }: { isAuthenticated: boolean }) {
     }
   }, [isAuthenticated, setMode, mode])
 
-  // Load demo stars into store so star picking and search work in demo mode
+  // Load demo stars and genres into store so star picking, search, and minimap work in demo mode
   useEffect(() => {
-    if (!isAuthenticated && useAppStore.getState().stars.length === 0) {
+    const state = useAppStore.getState()
+    if (!isAuthenticated && state.stars.length === 0) {
       const demoStars: StarData[] = demoData.stars.map((s) => ({
         id: s.id,
         name: s.name,
@@ -47,7 +48,15 @@ function ModeSync({ isAuthenticated }: { isAuthenticated: boolean }) {
         size: s.size,
         brightness: s.brightness,
       }))
-      useAppStore.getState().addStarBatch(demoStars)
+      state.addStarBatch(demoStars)
+      state.setGenres(
+        demoData.genres.map((g) => ({
+          id: g.id,
+          name: g.name,
+          color: g.color as [number, number, number],
+          centroid: g.centroid as [number, number, number],
+        }))
+      )
     }
   }, [isAuthenticated])
 
@@ -114,8 +123,7 @@ export default function GalaxyScene({ isAuthenticated }: GalaxySceneProps) {
       <ambientLight intensity={0.5} />
       {/* RealGalaxy renders both demo and real stars from the store */}
       <RealGalaxy />
-      {/* DemoGalaxy only used during auth transition (fades out when real stars arrive) */}
-      {isAuthenticated && <DemoGalaxyFader />}
+      {/* DemoGalaxy removed — RealGalaxy handles both demo and real stars from store */}
       <StarInfoCard />
       <GenreLabels />
       <ConstellationLines />
