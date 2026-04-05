@@ -103,7 +103,12 @@ Plans:
   6. Clicking a star shows artist constellation lines connecting all stars by that artist
   7. A mini-map HUD shows the user's current position relative to the full galaxy
   8. The app maintains 60fps on modern desktop browsers with all visual effects enabled
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 05-01-PLAN.md -- Bloom post-processing, beacon star shaders, genre labels, and constellation lines (3D scene layer)
+- [ ] 05-02-PLAN.md -- Galaxy stats card with personality label, mini-map HUD, and DOM overlay wiring
+
 **UI hint**: yes
 
 ## Progress
@@ -117,4 +122,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 2. Data Pipeline | 0/3 | Planning complete | - |
 | 3. Galaxy Renderer | 0/2 | Planning complete | - |
 | 4. Navigation & Interaction | 1/3 | In Progress|  |
-| 5. Visual Polish & HUD | 0/TBD | Not started | - |
+| 5. Visual Polish & HUD | 0/2 | Planning complete | - |
