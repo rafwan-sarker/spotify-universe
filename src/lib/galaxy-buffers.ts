@@ -92,8 +92,25 @@ export function updateStarBuffers(
 
     // Phase offset: deterministic from star ID hash
     buffers.phaseOffsets[bufferIndex] = hashToPhaseOffset(star.id)
+  }
 
-    // Top track: brightness > 0.6 threshold
-    buffers.isTopTracks[bufferIndex] = star.brightness > 0.6 ? 1.0 : 0.0
+  // Tiered beacon classification (second pass):
+  // Sort indices by brightness descending, then assign:
+  // - Top 5 stars with brightness >= 0.8 -> 2.0 (beacon)
+  // - Other stars with brightness > 0.6 -> 1.0 (top track)
+  // - All others -> 0.0 (normal)
+  const indices = Array.from({ length: batchSize }, (_, i) => i)
+  indices.sort((a, b) => stars[b].brightness - stars[a].brightness)
+  let beaconCount = 0
+  for (const idx of indices) {
+    const bufferIdx = startIndex + idx
+    if (stars[idx].brightness >= 0.8 && beaconCount < 5) {
+      buffers.isTopTracks[bufferIdx] = 2.0
+      beaconCount++
+    } else if (stars[idx].brightness > 0.6) {
+      buffers.isTopTracks[bufferIdx] = 1.0
+    } else {
+      buffers.isTopTracks[bufferIdx] = 0.0
+    }
   }
 }

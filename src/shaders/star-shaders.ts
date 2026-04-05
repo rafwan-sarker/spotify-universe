@@ -23,10 +23,12 @@ uniform float uTime;
 varying vec2 vUv;
 varying vec3 vColor;
 varying float vAlpha;
+varying float vBeaconLevel;
 
 void main() {
   vUv = uv;
   vColor = instanceColor;
+  vBeaconLevel = instanceIsTopTrack; // 0.0 = normal, 1.0 = top, 2.0 = beacon
 
   // Fade-in: smoothstep over 1.5 seconds from birth time
   float age = uTime - instanceBirthTime;
@@ -62,6 +64,7 @@ export const starFragmentShader = /* glsl */ `
 varying vec2 vUv;
 varying vec3 vColor;
 varying float vAlpha;
+varying float vBeaconLevel;
 
 void main() {
   // Distance from center of the billboard quad
@@ -81,7 +84,12 @@ void main() {
   // Final alpha with glow falloff and brightness
   float alpha = glow * vAlpha;
 
+  // Beacon boost: push color into HDR range for bloom pickup
+  // Normal stars (0.0): 1.0x, top tracks (1.0): 1.75x, top-5 beacons (2.0): 2.5x
+  float beaconBoost = 1.0 + vBeaconLevel * 0.75;
+  vec3 finalColor = color * alpha * beaconBoost;
+
   // Premultiplied alpha output for correct additive blending
-  gl_FragColor = vec4(color * alpha, alpha);
+  gl_FragColor = vec4(finalColor, alpha);
 }
 `
